@@ -12,10 +12,10 @@ public class Login extends JFrame {
     private JPanel loginView;
     private JPasswordField passwordField1;
     private JTextField textField1;
-    private JButton button1;
+    private JButton buttonPlogin;
     private JTextField textField2;
     private JPasswordField passwordField2;
-    private JButton button2;
+    private JButton ButtonDlogin;
     private JTextArea PHYSIOTHERAPYPORTALTextArea;
     private JTextArea PATIENTLOGINTextArea;
     private JTextArea DOCTORLOGINTextArea;
@@ -43,13 +43,19 @@ public class Login extends JFrame {
 
 
     private Login() {
-        button1.addActionListener(new ActionListener() {
+        buttonPlogin.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
 
-                pMain.createFrame();
+                pMain.setFrame();
 
 
+            }
+        });
+        ButtonDlogin.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                dMain.setFrame();
             }
         });
     }
