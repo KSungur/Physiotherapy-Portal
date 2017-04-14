@@ -8,11 +8,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 
-
-
-/**
- * Created by atabe on 14.04.2017.
- */
 public class Login extends JFrame {
     private JPanel loginView;
     private JPasswordField passwordField1;
@@ -24,42 +19,36 @@ public class Login extends JFrame {
     private JTextArea PHYSIOTHERAPYPORTALTextArea;
     private JTextArea PATIENTLOGINTextArea;
     private JTextArea DOCTORLOGINTextArea;
+   public static JFrame frame;
 
+    public static void setFrame(JFrame frame){
 
-    public static void createFrame(){
-
-
-        JFrame frame = new JFrame("LOGIN");
         frame.setLocation(400,100);
         frame.setPreferredSize(new Dimension(500,500));
         frame.setContentPane(new Login().loginView);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         frame.pack();
         frame.setVisible(true);
-
-
 
 }
 
 
-
-
     public static void main(String[] args) {
-
-        createFrame();
+        frame = new JFrame("LOGIN");
+        setFrame(frame);
 
 
     }
 
 
 
-    public Login() {
+    private Login() {
         button1.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
 
-                pMain pmain=new pMain();
                 pMain.createFrame();
+
 
             }
         });
