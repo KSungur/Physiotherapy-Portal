@@ -7,6 +7,8 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import static com.company.Login.frame;
+
 
 public class Login extends JFrame {
     private JPanel loginView;
@@ -27,6 +29,7 @@ public class Login extends JFrame {
         frame.setPreferredSize(new Dimension(500,500));
         frame.setContentPane(new Login().loginView);
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        frame.setResizable(false);
         frame.pack();
         frame.setVisible(true);
 
@@ -56,6 +59,7 @@ public class Login extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 dMain.setFrame();
+
             }
         });
     }
