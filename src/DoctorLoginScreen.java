@@ -46,6 +46,7 @@ public class DoctorLoginScreen extends JPanel {
 		btnDoctorLogin.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				try{
+					
 					String query = "select * from Doctor_Account where doctor_username=? and doctor_password=?";
 					PreparedStatement pst = connection.prepareStatement(query);
 					pst.setString (1 , tvDoctorID.getText());
@@ -57,6 +58,7 @@ public class DoctorLoginScreen extends JPanel {
 						count++;
 					}
 					if(count == 1){
+						DoctorMainScreen.Doctorinput(tvDoctorID.getText());
 						JOptionPane.showMessageDialog(null, "Username and password correct");
 						removeAll();
 						add(new DoctorMainScreen());

@@ -21,19 +21,36 @@ public class PatientEditScreen extends JFrame {
 	private JTextField tvPatientSurname;
 	private JTextField tvPatientTC;
 	private JTextField tvPatientPhone;
+	private JTextField tvGender;
+	private JTextField tvBirthDate;
+	private JTextField tvEmail;
+	private JTextField tvRecordDate;
 	
 	private String PatientName;
 	private String PatientSurname;
+	private String PatientTCNo;
+	private JTextField tvAdres;
+	
 	
 
 	
-	public void input(String PatientName , String PatientSurname, String PatientTCNo, String PatientPhone){
-		tvPatientName.setText(PatientName);
-		this.PatientName = PatientName;
-		this.PatientSurname = PatientSurname;
-		tvPatientSurname.setText(PatientSurname);
-		tvPatientTC.setText(PatientTCNo);
-		tvPatientPhone.setText(PatientPhone);
+	public void input (String patientName, String patientSurname, String patientTCNo, String patientPhone,
+			String patientGender, String patientBirth, String patientEmail, String patientAdres,
+			String patientRecordDate)
+	{
+		this.PatientName = patientName;
+		this.PatientSurname = patientSurname;
+		this.PatientTCNo = patientTCNo;
+		
+		tvPatientName.setText(patientName);
+		tvPatientSurname.setText(patientSurname);
+		tvPatientTC.setText(patientTCNo);
+		tvPatientPhone.setText(patientPhone);
+		tvGender.setText(patientGender);
+		tvBirthDate.setText(patientBirth);
+		tvEmail.setText(patientEmail);
+		tvAdres.setText(patientAdres);
+		tvRecordDate.setText(patientRecordDate);
 	}
 	
 	/**
@@ -59,7 +76,7 @@ public class PatientEditScreen extends JFrame {
 		
 		connection = sqliteConnection.dbConnector();
 		setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
-		setBounds(100, 100, 450, 300);
+		setBounds(100, 100, 450, 449);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -111,16 +128,22 @@ public class PatientEditScreen extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				
 				try {
-					String query = "update PAtients set ad=?, soyad=?, tc=?, tel=? where ad = ? and soyad = ?";
+					String query = "update PAtients set ad=?, soyad=?, tc=?, tel=?, gender=?, birth=?, email=?, adres=?, recorddate=? where ad = ? and soyad = ? and tc = ?";
 					PreparedStatement preparedStatement = connection.prepareStatement(query);
 					
 					preparedStatement.setString(1, tvPatientName.getText());
 					preparedStatement.setString(2, tvPatientSurname.getText());
 					preparedStatement.setString(3, tvPatientTC.getText());
 					preparedStatement.setString(4, tvPatientPhone.getText());
+					preparedStatement.setString(5, tvGender.getText());
+					preparedStatement.setString(6, tvBirthDate.getText());
+					preparedStatement.setString(7, tvEmail.getText());
+					preparedStatement.setString(8, tvAdres.getText());
+					preparedStatement.setString(9, tvRecordDate.getText());
 					
-					preparedStatement.setString(5, PatientName);
-					preparedStatement.setString(6, PatientSurname);
+					preparedStatement.setString(10, PatientName);
+					preparedStatement.setString(11, PatientSurname);
+					preparedStatement.setString(12, PatientTCNo);
 					
 					preparedStatement.execute();
 					JOptionPane.showMessageDialog(null, "Veri basarili bir sekilde degistirildi");
@@ -132,8 +155,53 @@ public class PatientEditScreen extends JFrame {
 				
 			}
 		});
-		btnSave.setBounds(182, 184, 97, 25);
+		btnSave.setBounds(182, 332, 97, 25);
 		contentPane.add(btnSave);
+		
+		JLabel lblGender = new JLabel("Gender");
+		lblGender.setBounds(90, 175, 56, 16);
+		contentPane.add(lblGender);
+		
+		tvGender = new JTextField();
+		tvGender.setColumns(10);
+		tvGender.setBounds(181, 172, 116, 22);
+		contentPane.add(tvGender);
+		
+		JLabel lblBirthdate = new JLabel("BirthDate");
+		lblBirthdate.setBounds(90, 207, 56, 16);
+		contentPane.add(lblBirthdate);
+		
+		tvBirthDate = new JTextField();
+		tvBirthDate.setColumns(10);
+		tvBirthDate.setBounds(181, 204, 116, 22);
+		contentPane.add(tvBirthDate);
+		
+		JLabel lblEmail = new JLabel("Email");
+		lblEmail.setBounds(90, 239, 56, 16);
+		contentPane.add(lblEmail);
+		
+		tvEmail = new JTextField();
+		tvEmail.setColumns(10);
+		tvEmail.setBounds(181, 236, 116, 22);
+		contentPane.add(tvEmail);
+		
+		JLabel lblRecorddate = new JLabel("RecordDate");
+		lblRecorddate.setBounds(90, 300, 56, 16);
+		contentPane.add(lblRecorddate);
+		
+		tvRecordDate = new JTextField();
+		tvRecordDate.setColumns(10);
+		tvRecordDate.setBounds(181, 297, 116, 22);
+		contentPane.add(tvRecordDate);
+		
+		JLabel lblAdres = new JLabel("Email");
+		lblAdres.setBounds(90, 271, 56, 16);
+		contentPane.add(lblAdres);
+		
+		tvAdres = new JTextField();
+		tvAdres.setColumns(10);
+		tvAdres.setBounds(181, 268, 116, 22);
+		contentPane.add(tvAdres);
 	}
 
 }
