@@ -1,17 +1,9 @@
-import javax.swing.JPanel;
-import javax.swing.JLabel;
-import javax.swing.JOptionPane;
-import javax.swing.JTextField;
-import javax.swing.JCheckBox;
-
+import javax.swing.*;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-
-import javax.swing.JButton;
-import javax.swing.JPasswordField;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
 
 public class DoctorLoginScreen extends JPanel {
 
@@ -43,36 +35,56 @@ public class DoctorLoginScreen extends JPanel {
         add(checkDoctor);
 
         JButton btnDoctorLogin = new JButton("Login");
-        btnDoctorLogin.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
+        btnDoctorLogin.addActionListener(e -> {
+            try {
+
+                String query = "select * from therapist where employeeID=? and password=?";
+                PreparedStatement pst = connection.prepareStatement(query);
+                pst.setString(1, tvDoctorID.getText());
+
+                String generatedPassword = null;
                 try {
-
-                    String query = "select * from therapist where employeeID=? and password=?";
-                    PreparedStatement pst = connection.prepareStatement(query);
-                    pst.setString(1, tvDoctorID.getText());
-                    pst.setString(2, tvDoctorPassword.getText());
-
-                    ResultSet rs = pst.executeQuery();
-                    int count = 0;
-                    while (rs.next()) {
-                        count++;
+                    // Create MessageDigest instance for MD5
+                    MessageDigest md = MessageDigest.getInstance("MD5");
+                    //Add password bytes to digest
+                    md.update(tvDoctorPassword.getText().getBytes());
+                    //Get the hash's bytes
+                    byte[] bytes = md.digest();
+                    //This bytes[] has bytes in decimal format;
+                    //Convert it to hexadecimal format
+                    StringBuilder sb = new StringBuilder();
+                    for (byte aByte : bytes) {
+                        sb.append(Integer.toString((aByte & 0xff) + 0x100, 16).substring(1));
                     }
-                    if (count == 1) {
-                        DoctorMainScreen.Doctorinput(tvDoctorID.getText());
-                        JOptionPane.showMessageDialog(null, "Username and password correct");
-                        removeAll();
-                        add(new DoctorMainScreen());
-                        repaint();
-                        invalidate();
-                        revalidate();
-                    } else {
-                        JOptionPane.showMessageDialog(null, "Username or password incorrect");
-                    }
-                    rs.close();
-                    pst.close();
-                } catch (Exception e1) {
-                    JOptionPane.showConfirmDialog(null, e1);
+                    //Get complete hashed password in hex format
+                    generatedPassword = sb.toString();
+                } catch (NoSuchAlgorithmException e3) {
+                    e3.printStackTrace();
                 }
+
+
+                pst.setString(2, generatedPassword);
+
+                ResultSet rs = pst.executeQuery();
+                int count = 0;
+                while (rs.next()) {
+                    count++;
+                }
+                if (count == 1) {
+                    DoctorMainScreen.Doctorinput(tvDoctorID.getText());
+                    JOptionPane.showMessageDialog(null, "Username and password correct");
+                    removeAll();
+                    add(new DoctorMainScreen());
+                    repaint();
+                    invalidate();
+                    revalidate();
+                } else {
+                    JOptionPane.showMessageDialog(null, "Username or password incorrect");
+                }
+                rs.close();
+                pst.close();
+            } catch (Exception e1) {
+                JOptionPane.showConfirmDialog(null, e1);
             }
         });
         btnDoctorLogin.setBounds(403, 429, 97, 25);

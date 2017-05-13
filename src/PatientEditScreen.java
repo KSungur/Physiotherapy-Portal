@@ -1,25 +1,16 @@
-import java.awt.BorderLayout;
-import java.awt.EventQueue;
+import javax.swing.*;
+import javax.swing.border.EmptyBorder;
+import java.awt.*;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
-
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
-import javax.swing.JLabel;
-import javax.swing.JOptionPane;
-import javax.swing.JTextField;
-import javax.swing.JButton;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
 
 public class PatientEditScreen extends JFrame {
     Connection connection = null;
     private JPanel contentPane;
     private JTextField tvPatientName;
     private JTextField tvPatientSurname;
-    private JTextField tvPatientTC;
+    //    private JTextField tvPatientTC;
     private JTextField tvPatientPhone;
     private JTextField tvGender;
     private JTextField tvBirthDate;
@@ -37,11 +28,11 @@ public class PatientEditScreen extends JFrame {
                       String patientRecordDate) {
         this.PatientName = patientName;
         this.PatientSurname = patientSurname;
-        this.PatientTCNo = patientTCNo;
+//        this.PatientTCNo = patientTCNo;
 
         tvPatientName.setText(patientName);
         tvPatientSurname.setText(patientSurname);
-        tvPatientTC.setText(patientTCNo);
+//        tvPatientTC.setText(patientTCNo);
         tvPatientPhone.setText(patientPhone);
         tvGender.setText(patientGender);
         tvBirthDate.setText(patientBirth);
@@ -54,14 +45,12 @@ public class PatientEditScreen extends JFrame {
      * Launch the application.
      */
     public static void main(String[] args) {
-        EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                try {
-                    PatientEditScreen frame = new PatientEditScreen();
-                    frame.setVisible(true);
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
+        EventQueue.invokeLater(() -> {
+            try {
+                PatientEditScreen frame = new PatientEditScreen();
+                frame.setVisible(true);
+            } catch (Exception e) {
+                e.printStackTrace();
             }
         });
     }
@@ -80,11 +69,11 @@ public class PatientEditScreen extends JFrame {
         contentPane.setLayout(null);
 
         JLabel lblPatientEditScreen = new JLabel("Patient Edit");
-        lblPatientEditScreen.setBounds(182, 13, 56, 16);
+        lblPatientEditScreen.setBounds(182, 13, 120, 16);
         contentPane.add(lblPatientEditScreen);
 
         JLabel lblPatientName = new JLabel("Name");
-        lblPatientName.setBounds(90, 47, 56, 16);
+        lblPatientName.setBounds(90, 47, 80, 16);
         contentPane.add(lblPatientName);
 
         tvPatientName = new JTextField();
@@ -93,7 +82,7 @@ public class PatientEditScreen extends JFrame {
         tvPatientName.setColumns(10);
 
         JLabel lblPatientSurname = new JLabel("Surname");
-        lblPatientSurname.setBounds(90, 79, 56, 16);
+        lblPatientSurname.setBounds(90, 79, 80, 16);
         contentPane.add(lblPatientSurname);
 
         tvPatientSurname = new JTextField();
@@ -101,17 +90,17 @@ public class PatientEditScreen extends JFrame {
         tvPatientSurname.setBounds(181, 76, 116, 22);
         contentPane.add(tvPatientSurname);
 
-        JLabel lblPatientTC = new JLabel("TC No");
-        lblPatientTC.setBounds(90, 111, 56, 16);
-        contentPane.add(lblPatientTC);
+//        JLabel lblPatientTC = new JLabel("ID");
+//        lblPatientTC.setBounds(90, 111, 80, 16);
+//        contentPane.add(lblPatientTC);
 
-        tvPatientTC = new JTextField();
-        tvPatientTC.setColumns(10);
-        tvPatientTC.setBounds(181, 108, 116, 22);
-        contentPane.add(tvPatientTC);
+//        tvPatientTC = new JTextField();
+//        tvPatientTC.setColumns(10);
+//        tvPatientTC.setBounds(181, 108, 116, 22);
+//        contentPane.add(tvPatientTC);
 
         JLabel lblPatientPhone = new JLabel("Phone");
-        lblPatientPhone.setBounds(90, 143, 56, 16);
+        lblPatientPhone.setBounds(90, 143, 80, 16);
         contentPane.add(lblPatientPhone);
 
         tvPatientPhone = new JTextField();
@@ -121,36 +110,34 @@ public class PatientEditScreen extends JFrame {
 
 
         JButton btnSave = new JButton("Save");
-        btnSave.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
+        btnSave.addActionListener(e -> {
+            try {
+                String query = "update patient set Name =?, Surname=?, Phone=?, Gender=?, Birth=?, Email=?, Address=?, RecordDate=? where Name = ? and Surname = ? and patientID = ?";
+                PreparedStatement preparedStatement = connection.prepareStatement(query);
 
-                try {
-                    String query = "update PAtients set ad=?, soyad=?, tc=?, tel=?, gender=?, birth=?, email=?, adres=?, recorddate=? where ad = ? and soyad = ? and tc = ?";
-                    PreparedStatement preparedStatement = connection.prepareStatement(query);
+                preparedStatement.setString(1, tvPatientName.getText());
+                preparedStatement.setString(2, tvPatientSurname.getText());
+//                    preparedStatement.setString(3, tvPatientTC.getText());
+                preparedStatement.setString(3, tvPatientPhone.getText());
+                preparedStatement.setString(4, tvGender.getText());
+                preparedStatement.setString(5, tvBirthDate.getText());
+                preparedStatement.setString(6, tvEmail.getText());
+                preparedStatement.setString(7, tvAdres.getText());
+                preparedStatement.setString(8, tvRecordDate.getText());
 
-                    preparedStatement.setString(1, tvPatientName.getText());
-                    preparedStatement.setString(2, tvPatientSurname.getText());
-                    preparedStatement.setString(3, tvPatientTC.getText());
-                    preparedStatement.setString(4, tvPatientPhone.getText());
-                    preparedStatement.setString(5, tvGender.getText());
-                    preparedStatement.setString(6, tvBirthDate.getText());
-                    preparedStatement.setString(7, tvEmail.getText());
-                    preparedStatement.setString(8, tvAdres.getText());
-                    preparedStatement.setString(9, tvRecordDate.getText());
+                preparedStatement.setString(9, PatientName);
+                preparedStatement.setString(10, PatientSurname);
+                preparedStatement.setString(11, PatientTCNo);
+//                    preparedStatement.setString(12, PatientTCNo);
 
-                    preparedStatement.setString(10, PatientName);
-                    preparedStatement.setString(11, PatientSurname);
-                    preparedStatement.setString(12, PatientTCNo);
+                preparedStatement.execute();
+                JOptionPane.showMessageDialog(null, "Veri basarili bir sekilde degistirildi");
 
-                    preparedStatement.execute();
-                    JOptionPane.showMessageDialog(null, "Veri basarili bir sekilde degistirildi");
-
-                    preparedStatement.close();
-                } catch (SQLException e1) {
-                    e1.printStackTrace();
-                }
-
+                preparedStatement.close();
+            } catch (SQLException e1) {
+                e1.printStackTrace();
             }
+
         });
         btnSave.setBounds(182, 332, 97, 25);
         contentPane.add(btnSave);
@@ -164,8 +151,8 @@ public class PatientEditScreen extends JFrame {
         tvGender.setBounds(181, 172, 116, 22);
         contentPane.add(tvGender);
 
-        JLabel lblBirthdate = new JLabel("BirthDate");
-        lblBirthdate.setBounds(90, 207, 56, 16);
+        JLabel lblBirthdate = new JLabel("Birth Date");
+        lblBirthdate.setBounds(90, 207, 120, 16);
         contentPane.add(lblBirthdate);
 
         tvBirthDate = new JTextField();
@@ -174,7 +161,7 @@ public class PatientEditScreen extends JFrame {
         contentPane.add(tvBirthDate);
 
         JLabel lblEmail = new JLabel("Email");
-        lblEmail.setBounds(90, 239, 56, 16);
+        lblEmail.setBounds(90, 239, 80, 16);
         contentPane.add(lblEmail);
 
         tvEmail = new JTextField();
@@ -183,7 +170,7 @@ public class PatientEditScreen extends JFrame {
         contentPane.add(tvEmail);
 
         JLabel lblRecorddate = new JLabel("RecordDate");
-        lblRecorddate.setBounds(90, 300, 56, 16);
+        lblRecorddate.setBounds(90, 300, 120, 16);
         contentPane.add(lblRecorddate);
 
         tvRecordDate = new JTextField();
@@ -191,8 +178,8 @@ public class PatientEditScreen extends JFrame {
         tvRecordDate.setBounds(181, 297, 116, 22);
         contentPane.add(tvRecordDate);
 
-        JLabel lblAdres = new JLabel("Email");
-        lblAdres.setBounds(90, 271, 56, 16);
+        JLabel lblAdres = new JLabel("Address");
+        lblAdres.setBounds(90, 271, 120, 16);
         contentPane.add(lblAdres);
 
         tvAdres = new JTextField();

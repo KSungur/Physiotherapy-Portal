@@ -1,13 +1,6 @@
-import java.awt.*;
-
-import javax.swing.JFrame;
-import javax.swing.JPanel;
+import javax.swing.*;
 import javax.swing.border.EmptyBorder;
-import javax.swing.JButton;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
-import javax.swing.JLabel;
-import javax.swing.SwingConstants;
+import java.awt.*;
 
 public class LoginScreen extends JFrame {
 
@@ -18,14 +11,12 @@ public class LoginScreen extends JFrame {
      * Launch the application.
      */
     public static void main(String[] args) {
-        EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                try {
-                    frame = new LoginScreen();
-                    frame.setVisible(true);
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
+        EventQueue.invokeLater(() -> {
+            try {
+                frame = new LoginScreen();
+                frame.setVisible(true);
+            } catch (Exception e) {
+                e.printStackTrace();
             }
         });
     }
@@ -50,27 +41,23 @@ public class LoginScreen extends JFrame {
         contentPane.add(lblfizyoterapistim);
 
         JButton btnDoctorLogin = new JButton("Doctor Login");
-        btnDoctorLogin.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                frame.getContentPane().removeAll();
-                frame.getContentPane().add(new DoctorLoginScreen());
-                frame.getContentPane().repaint();
-                frame.getContentPane().invalidate();
-                frame.getContentPane().revalidate();
-            }
+        btnDoctorLogin.addActionListener(e -> {
+            frame.getContentPane().removeAll();
+            frame.getContentPane().add(new DoctorLoginScreen());
+            frame.getContentPane().repaint();
+            frame.getContentPane().invalidate();
+            frame.getContentPane().revalidate();
         });
         btnDoctorLogin.setBounds(169, 305, 293, 236);
         contentPane.add(btnDoctorLogin);
 
         JButton btnPatientLogin = new JButton("Patient Login");
-        btnPatientLogin.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                frame.getContentPane().removeAll();
-                frame.getContentPane().add(new PatientLoginScreen());
-                frame.getContentPane().repaint();
-                frame.getContentPane().invalidate();
-                frame.getContentPane().revalidate();
-            }
+        btnPatientLogin.addActionListener(e -> {
+            frame.getContentPane().removeAll();
+            frame.getContentPane().add(new PatientLoginScreen());
+            frame.getContentPane().repaint();
+            frame.getContentPane().invalidate();
+            frame.getContentPane().revalidate();
         });
         btnPatientLogin.setBounds(890, 305, 293, 236);
         contentPane.add(btnPatientLogin);

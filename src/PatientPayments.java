@@ -1,27 +1,17 @@
-import java.awt.BorderLayout;
-import java.awt.EventQueue;
+import net.proteanit.sql.DbUtils;
+
+import javax.swing.*;
+import javax.swing.border.EmptyBorder;
+import javax.swing.border.TitledBorder;
+import java.awt.*;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
-import javax.swing.JTable;
-import javax.swing.JScrollPane;
-import javax.swing.border.TitledBorder;
-
-import net.proteanit.sql.DbUtils;
-
-import javax.swing.JLabel;
-import javax.swing.JTextField;
-import javax.swing.SwingConstants;
-
 public class PatientPayments extends JFrame {
 
-    Connection connection = null;
-    private JPanel contentPane;
+    private Connection connection = null;
     private JTable tablepayment;
     private JLabel lblPatientName;
     private JLabel lblPatientSurname;
@@ -35,9 +25,9 @@ public class PatientPayments extends JFrame {
     private static String PatientName;
     private static String PatientTCNo;
 
-    public static void Patientinput(String name, String tcno) {
+    static void Patientinput(String name, String id) {
         PatientName = name;
-        PatientTCNo = tcno;
+        PatientTCNo = id;
 
         System.out.println(PatientName + " " + PatientTCNo);
     }
@@ -46,14 +36,12 @@ public class PatientPayments extends JFrame {
      * Launch the application.
      */
     public static void main(String[] args) {
-        EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                try {
-                    PatientPayments frame = new PatientPayments();
-                    frame.setVisible(true);
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
+        EventQueue.invokeLater(() -> {
+            try {
+                PatientPayments frame = new PatientPayments();
+                frame.setVisible(true);
+            } catch (Exception e) {
+                e.printStackTrace();
             }
         });
     }
@@ -61,11 +49,11 @@ public class PatientPayments extends JFrame {
     /**
      * Create the frame.
      */
-    public PatientPayments() {
+    PatientPayments() {
         connection = MySqlConn.dbConnector();
         setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
         setBounds(100, 100, 512, 436);
-        contentPane = new JPanel();
+        JPanel contentPane = new JPanel();
         contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
         setContentPane(contentPane);
         contentPane.setLayout(null);
@@ -83,26 +71,26 @@ public class PatientPayments extends JFrame {
         contentPane.add(Name);
 
         lblPatientName = new JLabel("");
-        lblPatientName.setBounds(90, 42, 56, 16);
+        lblPatientName.setBounds(90, 42, 120, 16);
         contentPane.add(lblPatientName);
 
         JLabel Surname = new JLabel("Surname");
-        Surname.setBounds(10, 71, 56, 16);
+        Surname.setBounds(10, 71, 120, 16);
         contentPane.add(Surname);
 
         lblPatientSurname = new JLabel("");
-        lblPatientSurname.setBounds(90, 71, 56, 16);
+        lblPatientSurname.setBounds(90, 71, 120, 16);
         contentPane.add(lblPatientSurname);
 
-        JLabel lblTcNo = new JLabel("TC No");
-        lblTcNo.setBounds(10, 100, 56, 16);
+        JLabel lblTcNo = new JLabel("Patient ID");
+        lblTcNo.setBounds(10, 100, 150, 16);
         contentPane.add(lblTcNo);
 
         lblPatientTCNo = new JLabel("");
-        lblPatientTCNo.setBounds(90, 100, 56, 16);
+        lblPatientTCNo.setBounds(90, 100, 200, 16);
         contentPane.add(lblPatientTCNo);
 
-        JLabel lblPatientPayment = new JLabel("Patient's Payment");
+        JLabel lblPatientPayment = new JLabel("Patient's Payments");
         lblPatientPayment.setHorizontalAlignment(SwingConstants.CENTER);
         lblPatientPayment.setBounds(0, 13, 494, 16);
         contentPane.add(lblPatientPayment);
@@ -112,15 +100,15 @@ public class PatientPayments extends JFrame {
         contentPane.add(lblGender);
 
         lblPatientGender = new JLabel("");
-        lblPatientGender.setBounds(332, 42, 56, 16);
+        lblPatientGender.setBounds(332, 42, 80, 16);
         contentPane.add(lblPatientGender);
 
         JLabel lblBirthday = new JLabel("Birthday");
-        lblBirthday.setBounds(252, 71, 56, 16);
+        lblBirthday.setBounds(252, 71, 120, 16);
         contentPane.add(lblBirthday);
 
         lblPatientBirthday = new JLabel("");
-        lblPatientBirthday.setBounds(332, 71, 56, 16);
+        lblPatientBirthday.setBounds(332, 71, 150, 16);
         contentPane.add(lblPatientBirthday);
 
         JLabel lblEmail = new JLabel("Email");
@@ -128,45 +116,45 @@ public class PatientPayments extends JFrame {
         contentPane.add(lblEmail);
 
         lblPatientEmail = new JLabel("");
-        lblPatientEmail.setBounds(332, 100, 56, 16);
+        lblPatientEmail.setBounds(332, 100, 200, 16);
         contentPane.add(lblPatientEmail);
 
         lblPatientPhone = new JLabel("");
-        lblPatientPhone.setBounds(90, 129, 56, 16);
+        lblPatientPhone.setBounds(90, 129, 200, 16);
         contentPane.add(lblPatientPhone);
 
         JLabel lblPhone = new JLabel("Phone");
         lblPhone.setBounds(10, 129, 56, 16);
         contentPane.add(lblPhone);
 
-        JLabel lblAdres = new JLabel("Adres");
-        lblAdres.setBounds(252, 129, 56, 16);
+        JLabel lblAdres = new JLabel("Address");
+        lblAdres.setBounds(252, 129, 120, 16);
         contentPane.add(lblAdres);
 
         lblPatientAdres = new JLabel("");
-        lblPatientAdres.setBounds(332, 129, 56, 16);
+        lblPatientAdres.setBounds(332, 129, 200, 16);
         contentPane.add(lblPatientAdres);
 
         PatientInformation();
         fillPaymentTable();
     }
 
-    public void PatientInformation() {
-        String query = "select * from Patients where ad = ? and tc = ?";
+    private void PatientInformation() {
+        String query = "select * from patient where Name = ? and patientID = ?";
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(query);
             preparedStatement.setString(1, PatientName);
             preparedStatement.setString(2, PatientTCNo);
             ResultSet resultSet = preparedStatement.executeQuery();
             while (resultSet.next()) {
-                lblPatientName.setText(resultSet.getString("ad"));
-                lblPatientSurname.setText(resultSet.getString("soyad"));
-                lblPatientTCNo.setText(resultSet.getString("tc"));
-                lblPatientPhone.setText(resultSet.getString("tel"));
-                lblPatientGender.setText(resultSet.getString("gender"));
-                lblPatientBirthday.setText(resultSet.getString("birth"));
-                lblPatientEmail.setText(resultSet.getString("email"));
-                lblPatientAdres.setText(resultSet.getString("adres"));
+                lblPatientName.setText(resultSet.getString("Name"));
+                lblPatientSurname.setText(resultSet.getString("Surname"));
+                lblPatientTCNo.setText(resultSet.getString("patientID"));
+                lblPatientPhone.setText(resultSet.getString("Phone"));
+                lblPatientGender.setText(resultSet.getString("Gender"));
+                lblPatientBirthday.setText(resultSet.getString("Birth"));
+                lblPatientEmail.setText(resultSet.getString("Email"));
+                lblPatientAdres.setText(resultSet.getString("Address"));
             }
 
             preparedStatement.close();
@@ -176,9 +164,9 @@ public class PatientPayments extends JFrame {
         }
     }
 
-    public void fillPaymentTable() {
+    private void fillPaymentTable() {
         try {
-            String query = "select * from Patients_Payment where patient_id = ? order by payment_date";
+            String query = "SELECT * FROM patientPayment WHERE patientID = ? ORDER BY Date";
             PreparedStatement preparedStatement = connection.prepareStatement(query);
             preparedStatement.setString(1, PatientTCNo);
             ResultSet rs = preparedStatement.executeQuery();
@@ -186,7 +174,7 @@ public class PatientPayments extends JFrame {
 
             preparedStatement.close();
         } catch (Exception e) {
-
+            e.printStackTrace();
         }
     }
 }

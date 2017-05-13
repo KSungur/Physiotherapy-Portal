@@ -1,15 +1,9 @@
-import javax.swing.JPanel;
-import javax.swing.JLabel;
-import javax.swing.JOptionPane;
-import javax.swing.JTextField;
-import javax.swing.JPasswordField;
-import javax.swing.JButton;
-import javax.swing.JCheckBox;
-import java.awt.event.ActionListener;
+import javax.swing.*;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.awt.event.ActionEvent;
 
 public class PatientLoginScreen extends JPanel {
 
@@ -44,34 +38,63 @@ public class PatientLoginScreen extends JPanel {
         add(tvPatientPassword);
 
         JButton btnPatientLogin = new JButton("Login");
-        btnPatientLogin.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
+        btnPatientLogin.addActionListener(e -> {
+            try {
+                String query = "SELECT * FROM patient WHERE patientID=? AND password=?";
+                PreparedStatement pst = connection.prepareStatement(query);
+                pst.setString(1, tvPatientID.getText());
+
+                String generatedPassword = null;
                 try {
-                    String query = "select * from patient where patientID=? and password=?";
-                    PreparedStatement pst = connection.prepareStatement(query);
-                    pst.setString(1, tvPatientID.getText());
-                    pst.setString(2, tvPatientPassword.getText());
-
-                    ResultSet rs = pst.executeQuery();
-                    int count = 0;
-                    while (rs.next()) {
-                        count++;
+                    // Create MessageDigest instance for MD5
+                    MessageDigest md = MessageDigest.getInstance("MD5");
+                    //Add password bytes to digest
+                    md.update(tvPatientPassword.getText().getBytes());
+                    //Get the hash's bytes
+                    byte[] bytes = md.digest();
+                    //This bytes[] has bytes in decimal format;
+                    //Convert it to hexadecimal format
+                    StringBuilder sb = new StringBuilder();
+                    for (byte aByte : bytes) {
+                        sb.append(Integer.toString((aByte & 0xff) + 0x100, 16).substring(1));
                     }
-                    if (count == 1) {
-                        JOptionPane.showMessageDialog(null, "Username and password correct");
-                    } else {
-                        JOptionPane.showMessageDialog(null, "Username or password incorrect");
-                    }
-
-                    rs.close();
-                    pst.close();
-                } catch (Exception e1) {
-                    JOptionPane.showConfirmDialog(null, e1);
+                    //Get complete hashed password in hex format
+                    generatedPassword = sb.toString();
+                } catch (NoSuchAlgorithmException e3) {
+                    e3.printStackTrace();
                 }
+
+                pst.setString(2, generatedPassword);
+
+                ResultSet rs = pst.executeQuery();
+                int count = 0;
+                while (rs.next()) {
+                    count++;
+                }
+                if (count == 1) {
+                    JOptionPane.showMessageDialog(null, "Username and password correct");
+                } else {
+                    JOptionPane.showMessageDialog(null, "Username or password incorrect");
+                }
+
+                rs.close();
+                pst.close();
+            } catch (Exception e1) {
+                JOptionPane.showConfirmDialog(null, e1);
             }
         });
-        btnPatientLogin.setBounds(427, 327, 97, 25);
+        btnPatientLogin.setBounds(370, 327, 97, 25);
         add(btnPatientLogin);
+
+
+        JButton btnPatientSignup = new JButton("Sign up");
+        btnPatientSignup.addActionListener(e -> {
+            PatientSignupScreen patientSignupScreen = new PatientSignupScreen();
+            patientSignupScreen.setVisible(true);
+        });
+        btnPatientSignup.setBounds(480, 327, 97, 25);
+        add(btnPatientSignup);
+
 
         JCheckBox checkPatient = new JCheckBox("Remember Me");
         checkPatient.setBounds(383, 390, 150, 25);
