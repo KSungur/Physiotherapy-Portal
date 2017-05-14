@@ -2,42 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bd2d0cda-7ac1-4b58-a22a-040a7c2de4de" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/PatientSignupScreen.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/DoctorLoginScreen$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/DoctorMainScreen$10.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/DoctorMainScreen$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/DoctorMainScreen$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/DoctorMainScreen$4.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/DoctorMainScreen$5.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/DoctorMainScreen$6.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/DoctorMainScreen$7.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/DoctorMainScreen$8.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/DoctorMainScreen$9.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/LoginScreen$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/LoginScreen$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/LoginScreen$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/PatientAddScreen$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/PatientAddScreen$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/PatientAddScreen.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/PatientEditScreen$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/PatientEditScreen$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/PatientLoginScreen$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/PatientPayments$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/PatientAddScreen.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/DoctorLoginScreen.class" afterPath="$PROJECT_DIR$/bin/DoctorLoginScreen.class" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/SqlConnection.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/sqliteConnection.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/DoctorMainScreen$1.class" afterPath="$PROJECT_DIR$/bin/DoctorMainScreen$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/DoctorMainScreen.class" afterPath="$PROJECT_DIR$/bin/DoctorMainScreen.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/LoginScreen.class" afterPath="$PROJECT_DIR$/bin/LoginScreen.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/PatientEditScreen.class" afterPath="$PROJECT_DIR$/bin/PatientEditScreen.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/PatientLoginScreen.class" afterPath="$PROJECT_DIR$/bin/PatientLoginScreen.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/PatientPayments.class" afterPath="$PROJECT_DIR$/bin/PatientPayments.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/PatientSignupScreen.class" afterPath="$PROJECT_DIR$/bin/PatientSignupScreen.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DoctorLoginScreen.java" afterPath="$PROJECT_DIR$/src/DoctorLoginScreen.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DoctorMainScreen.java" afterPath="$PROJECT_DIR$/src/DoctorMainScreen.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/LoginScreen.java" afterPath="$PROJECT_DIR$/src/LoginScreen.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MySqlConn.java" afterPath="$PROJECT_DIR$/src/MySqlConn.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PatientEditScreen.java" afterPath="$PROJECT_DIR$/src/PatientEditScreen.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PatientLoginScreen.java" afterPath="$PROJECT_DIR$/src/PatientLoginScreen.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PatientPayments.java" afterPath="$PROJECT_DIR$/src/PatientPayments.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PatientSignupScreen.java" afterPath="$PROJECT_DIR$/src/PatientSignupScreen.java" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -58,13 +36,77 @@
     <option name="SHOW_TABLE_DETAILS" value="true" />
     <option name="SHOW_EMPTY_GROUPS" value="false" />
     <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" />
+        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="physiotherapy@localhost" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+    </PATH>
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" />
+        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="physiotherapy@localhost" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="physiotherapy" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+    </PATH>
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" />
+        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="physiotherapy@localhost" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="physiotherapy" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="patient" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+    </PATH>
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="SE360" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf>
+      <file leaf-file-name="DoctorMainScreen.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/DoctorMainScreen.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="226">
+              <caret line="166" column="31" lean-forward="false" selection-start-line="166" selection-start-column="31" selection-end-line="166" selection-end-column="31" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#617#618#0" expanded="true" />
+                <element signature="e#663#664#0" expanded="true" />
+                <marker date="1494777965317" expanded="true" signature="4033:4118" ph="delete from " />
+                <marker date="1494777965317" expanded="true" signature="6419:6546" ph="select patie... Patients" />
+                <marker date="1494777965317" expanded="true" signature="9050:9091" ph="select * fro... Patients" />
+                <marker date="1494777965317" expanded="true" signature="9729:9854" ph="SELECT patie... appointment" />
+                <marker date="1494777965317" expanded="true" signature="9735:9854" ph="select patie... appointment" />
+                <marker date="1494777965317" expanded="true" signature="10209:10369" ph="SELECT Name,... patient" />
+                <marker date="1494777965317" expanded="true" signature="10226:10369" ph="select Name,... patient" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -75,18 +117,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>date</find>
-      <find>Date</find>
-      <find>insert into Patient</find>
-      <find>patientsignup</find>
-      <find>new reco</find>
-      <find>mnitemNewRecord</find>
-      <find>btnNew</find>
-      <find>new Rece</find>
-      <find>Man</find>
-      <find>new record</find>
-      <find>new Record</find>
-      <find>edit</find>
       <find>Delete</find>
       <find>Refresh</find>
       <find>Patients</find>
@@ -101,10 +131,22 @@
       <find>patient</find>
       <find>from</find>
       <find>birthDay</find>
-      <find>gender</find>
       <find>email</find>
       <find>phone</find>
       <find>patientID</find>
+      <find>edit</find>
+      <find>Edit</find>
+      <find>local</find>
+      <find>input(</find>
+      <find>in</find>
+      <find>Gender</find>
+      <find>gender</find>
+      <find>textbo</find>
+      <find>appoin</find>
+      <find>Appoin</find>
+      <find>border</find>
+      <find>send e</find>
+      <find>btnSentExercises</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -121,14 +163,15 @@
         <option value="$PROJECT_DIR$/src/sqliteConnection.java" />
         <option value="$PROJECT_DIR$/src/SqlConnection.java" />
         <option value="$PROJECT_DIR$/src/com/company/MySqlConn.java" />
-        <option value="$PROJECT_DIR$/src/MySqlConn.java" />
         <option value="$PROJECT_DIR$/src/PatientAddScreen.java" />
-        <option value="$PROJECT_DIR$/src/LoginScreen.java" />
-        <option value="$PROJECT_DIR$/src/PatientEditScreen.java" />
-        <option value="$PROJECT_DIR$/src/DoctorLoginScreen.java" />
-        <option value="$PROJECT_DIR$/src/PatientLoginScreen.java" />
-        <option value="$PROJECT_DIR$/src/PatientSignupScreen.java" />
         <option value="$PROJECT_DIR$/src/PatientPayments.java" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/bf1f4de9-3f25-4c40-97e8-3eb128269428/console.sql" />
+        <option value="$PROJECT_DIR$/src/PatientSignupScreen.java" />
+        <option value="$PROJECT_DIR$/src/PatientEditScreen.java" />
+        <option value="$PROJECT_DIR$/src/LoginScreen.java" />
+        <option value="$PROJECT_DIR$/src/MySqlConn.java" />
+        <option value="$PROJECT_DIR$/src/PatientLoginScreen.java" />
+        <option value="$PROJECT_DIR$/src/DoctorLoginScreen.java" />
         <option value="$PROJECT_DIR$/src/DoctorMainScreen.java" />
       </list>
     </option>
@@ -159,8 +202,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -202,6 +245,7 @@
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
+    <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -675,12 +719,13 @@
       <updated>1494692557455</updated>
       <workItem from="1494692560844" duration="212000" />
       <workItem from="1494692789930" duration="3378000" />
-      <workItem from="1494701084186" duration="10893000" />
+      <workItem from="1494701084186" duration="11063000" />
+      <workItem from="1494772016492" duration="5097000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14483000" />
+    <option name="totallyTimeSpent" value="19750000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -693,6 +738,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1920" height="1053" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -708,10 +754,10 @@
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32925472" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19423692" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19637139" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32977587" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32925472" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2497332" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -723,6 +769,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32925472" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -745,7 +792,7 @@
         <state relative-caret-position="665">
           <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
           <folding>
-            <marker date="1494709634813" expanded="true" signature="1216:1273" ph="select * fro... therapist" />
+            <marker date="1494777905287" expanded="true" signature="1443:1500" ph="select * fro... therapist" />
           </folding>
         </state>
       </provider>
@@ -756,13 +803,15 @@
           <caret line="49" column="53" lean-forward="false" selection-start-line="49" selection-start-column="53" selection-end-line="49" selection-end-column="53" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1494711955311" expanded="true" signature="4080:4165" ph="delete from " />
-            <marker date="1494711955311" expanded="true" signature="6466:6593" ph="select patie... Patients" />
-            <marker date="1494711955311" expanded="true" signature="9032:9073" ph="select * fro... Patients" />
-            <marker date="1494711955311" expanded="true" signature="9710:9835" ph="SELECT patie... appointment" />
-            <marker date="1494711955311" expanded="true" signature="9716:9835" ph="select patie... appointment" />
-            <marker date="1494711955311" expanded="true" signature="10189:10349" ph="SELECT Name,... patient" />
-            <marker date="1494711955311" expanded="true" signature="10206:10349" ph="select Name,... patient" />
+            <element signature="e#617#618#0" expanded="true" />
+            <element signature="e#663#664#0" expanded="true" />
+            <marker date="1494777965317" expanded="true" signature="4033:4118" ph="delete from " />
+            <marker date="1494777965317" expanded="true" signature="6419:6546" ph="select patie... Patients" />
+            <marker date="1494777965317" expanded="true" signature="9050:9091" ph="select * fro... Patients" />
+            <marker date="1494777965317" expanded="true" signature="9729:9854" ph="SELECT patie... appointment" />
+            <marker date="1494777965317" expanded="true" signature="9735:9854" ph="select patie... appointment" />
+            <marker date="1494777965317" expanded="true" signature="10209:10369" ph="SELECT Name,... patient" />
+            <marker date="1494777965317" expanded="true" signature="10226:10369" ph="select Name,... patient" />
           </folding>
         </state>
       </provider>
@@ -789,7 +838,7 @@
           <caret line="26" column="28" lean-forward="false" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1494709417229" expanded="true" signature="1273:1327" ph="SELECT * FRO... patient" />
+            <marker date="1494777534977" expanded="true" signature="1267:1321" ph="SELECT * FRO... patient" />
           </folding>
         </state>
       </provider>
@@ -799,7 +848,7 @@
         <state relative-caret-position="38">
           <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
           <folding>
-            <marker date="1494709634813" expanded="true" signature="1216:1273" ph="select * fro... therapist" />
+            <marker date="1494777905287" expanded="true" signature="1443:1500" ph="select * fro... therapist" />
           </folding>
         </state>
       </provider>
@@ -818,7 +867,7 @@
           <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1494710284266" expanded="true" signature="3287:3434" ph="insert into patient... " />
+            <marker date="1494776720299" expanded="true" signature="3280:3427" ph="insert into patient... " />
           </folding>
         </state>
       </provider>
@@ -828,7 +877,7 @@
         <state relative-caret-position="304">
           <caret line="30" column="31" lean-forward="false" selection-start-line="30" selection-start-column="31" selection-end-line="30" selection-end-column="31" />
           <folding>
-            <marker date="1494708779444" expanded="true" signature="3872:4020" ph="update patie... " />
+            <marker date="1494776900984" expanded="true" signature="3802:3940" ph="update patie... " />
           </folding>
         </state>
       </provider>
@@ -888,53 +937,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/PatientEditScreen.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding>
-            <marker date="1494708779444" expanded="true" signature="3872:4020" ph="update patie... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MySqlConn.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PatientLoginScreen.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1539">
-          <caret line="81" column="36" lean-forward="true" selection-start-line="81" selection-start-column="36" selection-end-line="81" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1494709417229" expanded="true" signature="1273:1327" ph="SELECT * FRO... patient" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/LoginScreen.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DoctorLoginScreen.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding>
-            <marker date="1494709634813" expanded="true" signature="1216:1273" ph="select * fro... therapist" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///usr/lib/jvm/java-8-oracle/src.zip!/javax/swing/JTable.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="290">
@@ -943,51 +945,108 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/PatientSignupScreen.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="106" column="50" lean-forward="true" selection-start-line="106" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1494710284266" expanded="true" signature="3287:3434" ph="insert into patient... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/lib/mysql-connector-java-5.1.42.jar!/com/mysql/jdbc/SQLError.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="744">
           <caret line="134" column="0" lean-forward="false" selection-start-line="134" selection-start-column="0" selection-end-line="134" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/bf1f4de9-3f25-4c40-97e8-3eb128269428/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="22" lean-forward="true" selection-start-line="0" selection-start-column="22" selection-end-line="0" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/DoctorMainScreen.java">
+    <entry file="file://$PROJECT_DIR$/src/MySqlConn.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="101" column="65" lean-forward="false" selection-start-line="101" selection-start-column="65" selection-end-line="101" selection-end-column="65" />
+        <state relative-caret-position="266">
+          <caret line="16" column="5" lean-forward="true" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PatientLoginScreen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1494711955311" expanded="true" signature="4080:4165" ph="delete from " />
-            <marker date="1494711955311" expanded="true" signature="6466:6593" ph="select patie... Patients" />
-            <marker date="1494711955311" expanded="true" signature="9032:9073" ph="select * fro... Patients" />
-            <marker date="1494711955311" expanded="true" signature="9710:9835" ph="SELECT patie... appointment" />
-            <marker date="1494711955311" expanded="true" signature="9716:9835" ph="select patie... appointment" />
-            <marker date="1494711955311" expanded="true" signature="10189:10349" ph="SELECT Name,... patient" />
-            <marker date="1494711955311" expanded="true" signature="10206:10349" ph="select Name,... patient" />
+            <marker date="1494777534977" expanded="true" signature="1267:1321" ph="SELECT * FRO... patient" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PatientSignupScreen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="168" column="0" lean-forward="true" selection-start-line="168" selection-start-column="0" selection-end-line="168" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1494776720299" expanded="true" signature="3280:3427" ph="insert into patient... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DoctorLoginScreen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding>
+            <marker date="1494777905287" expanded="true" signature="1443:1500" ph="select * fro... therapist" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/LoginScreen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="27" column="1" lean-forward="true" selection-start-line="27" selection-start-column="1" selection-end-line="29" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PatientEditScreen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3496">
+          <caret line="184" column="34" lean-forward="false" selection-start-line="184" selection-start-column="34" selection-end-line="184" selection-end-column="34" />
+          <caret line="189" column="34" lean-forward="false" selection-start-line="189" selection-start-column="34" selection-end-line="189" selection-end-column="34" />
+          <folding>
+            <marker date="1494776900984" expanded="true" signature="3802:3940" ph="update patie... " />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/PatientPayments.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="713">
+        <state relative-caret-position="834">
           <caret line="134" column="47" lean-forward="false" selection-start-line="134" selection-start-column="47" selection-end-line="134" selection-end-column="47" />
           <folding>
             <marker date="1494711359258" expanded="true" signature="4561:4615" ph="select * fro... Patients" />
             <marker date="1494711359258" expanded="true" signature="5769:5827" ph="SELECT * FRO... patientPayment" />
             <marker date="1494711359258" expanded="true" signature="5769:5831" ph="SELECT * FRO... patientPayment" />
             <marker date="1494711359258" expanded="true" signature="5776:5818" ph="select * fro... Patients_Payment" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DoctorMainScreen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="166" column="31" lean-forward="false" selection-start-line="166" selection-start-column="31" selection-end-line="166" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#617#618#0" expanded="true" />
+            <element signature="e#663#664#0" expanded="true" />
+            <marker date="1494777965317" expanded="true" signature="4033:4118" ph="delete from " />
+            <marker date="1494777965317" expanded="true" signature="6419:6546" ph="select patie... Patients" />
+            <marker date="1494777965317" expanded="true" signature="9050:9091" ph="select * fro... Patients" />
+            <marker date="1494777965317" expanded="true" signature="9729:9854" ph="SELECT patie... appointment" />
+            <marker date="1494777965317" expanded="true" signature="9735:9854" ph="select patie... appointment" />
+            <marker date="1494777965317" expanded="true" signature="10209:10369" ph="SELECT Name,... patient" />
+            <marker date="1494777965317" expanded="true" signature="10226:10369" ph="select Name,... patient" />
           </folding>
         </state>
       </provider>

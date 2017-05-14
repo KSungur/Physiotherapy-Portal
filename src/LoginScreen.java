@@ -4,8 +4,7 @@ import java.awt.*;
 
 public class LoginScreen extends JFrame {
 
-    public static LoginScreen frame;
-    private static JPanel contentPane;
+    private static LoginScreen frame;
 
     /**
      * Launch the application.
@@ -24,18 +23,18 @@ public class LoginScreen extends JFrame {
     /**
      * Create the frame.
      */
-    public LoginScreen() {
+    private LoginScreen() {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         GraphicsDevice gd = GraphicsEnvironment.getLocalGraphicsEnvironment().getDefaultScreenDevice();
         int width = gd.getDisplayMode().getWidth();
         int height = gd.getDisplayMode().getHeight();
         setBounds(100, 100, width, height);
-        contentPane = new JPanel();
+        JPanel contentPane = new JPanel();
         contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
         setContentPane(contentPane);
         contentPane.setLayout(null);
 
-        JLabel lblfizyoterapistim = new JLabel("FIZYOTERAPISTIM");
+        JLabel lblfizyoterapistim = new JLabel("Physiotherapy Portal");
         lblfizyoterapistim.setHorizontalAlignment(SwingConstants.CENTER);
         lblfizyoterapistim.setBounds(533, 78, 359, 65);
         contentPane.add(lblfizyoterapistim);

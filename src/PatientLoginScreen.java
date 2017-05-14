@@ -5,9 +5,9 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
-public class PatientLoginScreen extends JPanel {
+class PatientLoginScreen extends JPanel {
 
-    Connection connection = null;
+    private Connection connection = null;
 
     private JTextField tvPatientID;
     private JPasswordField tvPatientPassword;
@@ -15,7 +15,7 @@ public class PatientLoginScreen extends JPanel {
     /**
      * Create the panel.
      */
-    public PatientLoginScreen() {
+    PatientLoginScreen() {
         connection = MySqlConn.dbConnector();
         setLayout(null);
         setSize(1500, 1000);

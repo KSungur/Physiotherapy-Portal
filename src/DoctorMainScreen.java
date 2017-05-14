@@ -11,18 +11,15 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class DoctorMainScreen extends JPanel {
+class DoctorMainScreen extends JPanel {
     private Connection connection = null;
     private JTextField tvPatientName;
     private JTextField tvPatientID;
     private JTable tablePatients;
     private JTable tableAppointment;
 
-    private static String DoctorName;
-
     static void Doctorinput(String doctorName) {
-        DoctorName = doctorName;
-        System.out.println(DoctorName);
+        System.out.println(doctorName);
     }
 
     /**
@@ -72,17 +69,18 @@ public class DoctorMainScreen extends JPanel {
         btnEdit.addActionListener(e -> {
             PatientEditScreen patientEditScreen = new PatientEditScreen();
             int row = tablePatients.getSelectedRow();
-            String PatientName = (tablePatients.getModel().getValueAt(row, 0)).toString();
-            String PatientSurname = (tablePatients.getModel().getValueAt(row, 1)).toString();
-            String PatientTCNo = (tablePatients.getModel().getValueAt(row, 2)).toString();
+            String PatientTCNo = (tablePatients.getModel().getValueAt(row, 0)).toString();
+            String PatientName = (tablePatients.getModel().getValueAt(row, 1)).toString();
+            String PatientSurname = (tablePatients.getModel().getValueAt(row, 2)).toString();
             String PatientPhone = (tablePatients.getModel().getValueAt(row, 3)).toString();
-            String PatientGender = (tablePatients.getModel().getValueAt(row, 4)).toString();
+//            String PatientGender = (tablePatients.getModel().getValueAt(row, 4)).toString();
             String PatientBirth = (tablePatients.getModel().getValueAt(row, 5)).toString();
             String PatientEmail = (tablePatients.getModel().getValueAt(row, 6)).toString();
             String PatientAdres = (tablePatients.getModel().getValueAt(row, 7)).toString();
             String PatientRecordDate = (tablePatients.getModel().getValueAt(row, 8)).toString();
 
-            patientEditScreen.input(PatientName, PatientSurname, PatientTCNo, PatientPhone, PatientGender, PatientBirth, PatientEmail, PatientAdres, PatientRecordDate);
+            patientEditScreen.input(PatientTCNo, PatientName, PatientSurname, PatientPhone, PatientBirth, PatientEmail, PatientAdres, PatientRecordDate);
+            System.out.println(PatientTCNo);
             patientEditScreen.setVisible(true);
             tvPatientName.setText("");
             tvPatientID.setText("");
@@ -166,7 +164,7 @@ public class DoctorMainScreen extends JPanel {
                 rs.close();
 
             } catch (Exception e1) {
-
+                e1.printStackTrace();
             }
         });
         btnSearchPatient.setBounds(186, 169, 97, 25);
@@ -175,7 +173,7 @@ public class DoctorMainScreen extends JPanel {
         JButton btnShowPatientPayments = new JButton("Patient's Payments");
         btnShowPatientPayments.addActionListener(arg0 -> {
             if (tvPatientID.getText().length() == 0 && tvPatientName.getText().length() == 0) {
-                JOptionPane.showMessageDialog(null, "Textboxlar bos");
+                JOptionPane.showMessageDialog(null, "Please enter patient's name and ID number.");
             } else {
                 PatientPayments.Patientinput(tvPatientName.getText(), tvPatientID.getText());
                 PatientPayments patientPayments = new PatientPayments();
@@ -233,7 +231,7 @@ public class DoctorMainScreen extends JPanel {
 
     }
 
-    public void AppointmentTableRefresh() {
+    private void AppointmentTableRefresh() {
         try {
             String query = "SELECT patientID, appointmentDate " +
                     "FROM appointment " +
@@ -246,7 +244,7 @@ public class DoctorMainScreen extends JPanel {
         }
     }
 
-    public void resfreshTable() {
+    private void resfreshTable() {
         try {
             String query = "SELECT patientID, Name, Surname, Gender , Phone , Birth, Email, Address, RecordDate " +
                     "FROM patient " +
