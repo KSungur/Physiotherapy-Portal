@@ -2,20 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bd2d0cda-7ac1-4b58-a22a-040a7c2de4de" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/SqlConnection.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/sqliteConnection.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/DoctorMainScreen$1.class" afterPath="$PROJECT_DIR$/bin/DoctorMainScreen$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/DoctorMainScreen.class" afterPath="$PROJECT_DIR$/bin/DoctorMainScreen.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/PatientEditScreen.class" afterPath="$PROJECT_DIR$/bin/PatientEditScreen.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/PatientSignupScreen.class" afterPath="$PROJECT_DIR$/bin/PatientSignupScreen.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DoctorLoginScreen.java" afterPath="$PROJECT_DIR$/src/DoctorLoginScreen.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DoctorMainScreen.java" afterPath="$PROJECT_DIR$/src/DoctorMainScreen.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/LoginScreen.java" afterPath="$PROJECT_DIR$/src/LoginScreen.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MySqlConn.java" afterPath="$PROJECT_DIR$/src/MySqlConn.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PatientEditScreen.java" afterPath="$PROJECT_DIR$/src/PatientEditScreen.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PatientLoginScreen.java" afterPath="$PROJECT_DIR$/src/PatientLoginScreen.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PatientSignupScreen.java" afterPath="$PROJECT_DIR$/src/PatientSignupScreen.java" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -84,29 +71,7 @@
     <favorites_list name="SE360" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="DoctorMainScreen.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/DoctorMainScreen.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="226">
-              <caret line="166" column="31" lean-forward="false" selection-start-line="166" selection-start-column="31" selection-end-line="166" selection-end-column="31" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#617#618#0" expanded="true" />
-                <element signature="e#663#664#0" expanded="true" />
-                <marker date="1494777965317" expanded="true" signature="4033:4118" ph="delete from " />
-                <marker date="1494777965317" expanded="true" signature="6419:6546" ph="select patie... Patients" />
-                <marker date="1494777965317" expanded="true" signature="9050:9091" ph="select * fro... Patients" />
-                <marker date="1494777965317" expanded="true" signature="9729:9854" ph="SELECT patie... appointment" />
-                <marker date="1494777965317" expanded="true" signature="9735:9854" ph="select patie... appointment" />
-                <marker date="1494777965317" expanded="true" signature="10209:10369" ph="SELECT Name,... patient" />
-                <marker date="1494777965317" expanded="true" signature="10226:10369" ph="select Name,... patient" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -213,20 +178,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="SE360" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SE360" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SE360" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -720,12 +671,12 @@
       <workItem from="1494692560844" duration="212000" />
       <workItem from="1494692789930" duration="3378000" />
       <workItem from="1494701084186" duration="11063000" />
-      <workItem from="1494772016492" duration="5097000" />
+      <workItem from="1494772016492" duration="5226000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19750000" />
+    <option name="totallyTimeSpent" value="19879000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -738,7 +689,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1920" height="1053" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1034,8 +984,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/DoctorMainScreen.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="166" column="31" lean-forward="false" selection-start-line="166" selection-start-column="31" selection-end-line="166" selection-end-column="31" />
+        <state relative-caret-position="454">
+          <caret line="166" column="37" lean-forward="true" selection-start-line="166" selection-start-column="37" selection-end-line="166" selection-end-column="37" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#617#618#0" expanded="true" />
