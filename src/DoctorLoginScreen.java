@@ -1,25 +1,20 @@
 import javax.swing.*;
-import java.awt.*;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
-class DoctorLoginScreen extends JPanel {
+public class DoctorLoginScreen extends JPanel {
 
-    private Connection connection = null;
+    Connection connection = null;
 
     private JTextField tvDoctorID;
     private JPasswordField tvDoctorPassword;
 
-    DoctorLoginScreen() {
+    public DoctorLoginScreen() {
         connection = MySqlConn.dbConnector();
-        GraphicsDevice gd = GraphicsEnvironment.getLocalGraphicsEnvironment().getDefaultScreenDevice();
-        int width = gd.getDisplayMode().getWidth();
-        int height = gd.getDisplayMode().getHeight();
-
-        setSize(width, height);
+        setSize(1500, 1000);
         setLayout(null);
 
         JLabel lblDoctorID = new JLabel("Doctor ID");

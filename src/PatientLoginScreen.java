@@ -5,9 +5,9 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
-class PatientLoginScreen extends JPanel {
+public class PatientLoginScreen extends JPanel {
 
-    private Connection connection = null;
+    Connection connection = null;
 
     private JTextField tvPatientID;
     private JPasswordField tvPatientPassword;
@@ -15,7 +15,7 @@ class PatientLoginScreen extends JPanel {
     /**
      * Create the panel.
      */
-    PatientLoginScreen() {
+    public PatientLoginScreen() {
         connection = MySqlConn.dbConnector();
         setLayout(null);
         setSize(1500, 1000);
@@ -72,7 +72,13 @@ class PatientLoginScreen extends JPanel {
                     count++;
                 }
                 if (count == 1) {
-                    JOptionPane.showMessageDialog(null, "Username and password correct");
+                	 PatientMainScreen.Patientinput(tvPatientID.getText());
+                     JOptionPane.showMessageDialog(null, "Username and password correct");
+                     removeAll();
+                     add(new PatientMainScreen());
+                     repaint();
+                     invalidate();
+                     revalidate();
                 } else {
                     JOptionPane.showMessageDialog(null, "Username or password incorrect");
                 }
