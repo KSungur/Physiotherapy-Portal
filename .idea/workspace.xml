@@ -2,42 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bd2d0cda-7ac1-4b58-a22a-040a7c2de4de" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/PatientSignupScreen.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/DoctorLoginScreen$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/DoctorMainScreen$10.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/DoctorMainScreen$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/DoctorMainScreen$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/DoctorMainScreen$4.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/DoctorMainScreen$5.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/DoctorMainScreen$6.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/DoctorMainScreen$7.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/DoctorMainScreen$8.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/DoctorMainScreen$9.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/LoginScreen$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/LoginScreen$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/LoginScreen$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/PatientAddScreen$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/PatientAddScreen$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/PatientAddScreen.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/PatientEditScreen$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/PatientEditScreen$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/PatientLoginScreen$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/PatientPayments$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/PatientAddScreen.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/DoctorLoginScreen.class" afterPath="$PROJECT_DIR$/bin/DoctorLoginScreen.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/DoctorMainScreen$1.class" afterPath="$PROJECT_DIR$/bin/DoctorMainScreen$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/DoctorMainScreen.class" afterPath="$PROJECT_DIR$/bin/DoctorMainScreen.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/LoginScreen.class" afterPath="$PROJECT_DIR$/bin/LoginScreen.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/PatientEditScreen.class" afterPath="$PROJECT_DIR$/bin/PatientEditScreen.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/PatientLoginScreen.class" afterPath="$PROJECT_DIR$/bin/PatientLoginScreen.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/PatientPayments.class" afterPath="$PROJECT_DIR$/bin/PatientPayments.class" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/C__/Users/alisi/Desktop/Software/Java/Physiotherapy-Portal/PhysiotherapyPortalDatabase.sqlite" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/SqlConnection.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/sqliteConnection.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DoctorLoginScreen.java" afterPath="$PROJECT_DIR$/src/DoctorLoginScreen.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DoctorMainScreen.java" afterPath="$PROJECT_DIR$/src/DoctorMainScreen.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/LoginScreen.java" afterPath="$PROJECT_DIR$/src/LoginScreen.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PatientEditScreen.java" afterPath="$PROJECT_DIR$/src/PatientEditScreen.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PatientLoginScreen.java" afterPath="$PROJECT_DIR$/src/PatientLoginScreen.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PatientPayments.java" afterPath="$PROJECT_DIR$/src/PatientPayments.java" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -64,7 +32,18 @@
     <favorites_list name="SE360" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="57">
+              <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -130,6 +109,7 @@
         <option value="$PROJECT_DIR$/src/PatientSignupScreen.java" />
         <option value="$PROJECT_DIR$/src/PatientPayments.java" />
         <option value="$PROJECT_DIR$/src/DoctorMainScreen.java" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -139,6 +119,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
     <option name="y" value="27" />
     <option name="width" value="1920" />
@@ -160,6 +141,7 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -187,9 +169,22 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SE360" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SE360" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -202,6 +197,8 @@
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="add_unversioned_files" value="true" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -572,6 +569,13 @@
     <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" working-dir="">
       <method />
     </configuration>
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
+      <method />
+    </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
       <option name="SERVER_MODE" value="false" />
@@ -676,11 +680,12 @@
       <workItem from="1494692560844" duration="212000" />
       <workItem from="1494692789930" duration="3378000" />
       <workItem from="1494701084186" duration="10893000" />
+      <workItem from="1496078388632" duration="397000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14483000" />
+    <option name="totallyTimeSpent" value="14880000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -693,36 +698,37 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1920" height="1053" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32925472" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3564568" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19423692" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19637139" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32977587" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32925472" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2497332" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39933258" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32925472" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32925472" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -744,9 +750,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="665">
           <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
-          <folding>
-            <marker date="1494709634813" expanded="true" signature="1216:1273" ph="select * fro... therapist" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -756,13 +760,6 @@
           <caret line="49" column="53" lean-forward="false" selection-start-line="49" selection-start-column="53" selection-end-line="49" selection-end-column="53" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1494711955311" expanded="true" signature="4080:4165" ph="delete from " />
-            <marker date="1494711955311" expanded="true" signature="6466:6593" ph="select patie... Patients" />
-            <marker date="1494711955311" expanded="true" signature="9032:9073" ph="select * fro... Patients" />
-            <marker date="1494711955311" expanded="true" signature="9710:9835" ph="SELECT patie... appointment" />
-            <marker date="1494711955311" expanded="true" signature="9716:9835" ph="select patie... appointment" />
-            <marker date="1494711955311" expanded="true" signature="10189:10349" ph="SELECT Name,... patient" />
-            <marker date="1494711955311" expanded="true" signature="10206:10349" ph="select Name,... patient" />
           </folding>
         </state>
       </provider>
@@ -789,7 +786,6 @@
           <caret line="26" column="28" lean-forward="false" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1494709417229" expanded="true" signature="1273:1327" ph="SELECT * FRO... patient" />
           </folding>
         </state>
       </provider>
@@ -798,9 +794,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="38">
           <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-          <folding>
-            <marker date="1494709634813" expanded="true" signature="1216:1273" ph="select * fro... therapist" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -818,7 +812,6 @@
           <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1494710284266" expanded="true" signature="3287:3434" ph="insert into patient... " />
           </folding>
         </state>
       </provider>
@@ -827,9 +820,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="304">
           <caret line="30" column="31" lean-forward="false" selection-start-line="30" selection-start-column="31" selection-end-line="30" selection-end-column="31" />
-          <folding>
-            <marker date="1494708779444" expanded="true" signature="3872:4020" ph="update patie... " />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -837,12 +828,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="38">
           <caret line="20" column="13" lean-forward="false" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-          <folding>
-            <marker date="1494711359258" expanded="true" signature="4561:4615" ph="select * fro... Patients" />
-            <marker date="1494711359258" expanded="true" signature="5769:5827" ph="SELECT * FRO... patientPayment" />
-            <marker date="1494711359258" expanded="true" signature="5769:5831" ph="SELECT * FRO... patientPayment" />
-            <marker date="1494711359258" expanded="true" signature="5776:5818" ph="select * fro... Patients_Payment" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -892,9 +878,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="38">
           <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding>
-            <marker date="1494708779444" expanded="true" signature="3872:4020" ph="update patie... " />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -912,7 +896,6 @@
           <caret line="81" column="36" lean-forward="true" selection-start-line="81" selection-start-column="36" selection-end-line="81" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1494709417229" expanded="true" signature="1273:1327" ph="SELECT * FRO... patient" />
           </folding>
         </state>
       </provider>
@@ -929,9 +912,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="38">
           <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding>
-            <marker date="1494709634813" expanded="true" signature="1216:1273" ph="select * fro... therapist" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -939,7 +920,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="290">
           <caret line="3675" column="16" lean-forward="false" selection-start-line="3675" selection-start-column="16" selection-end-line="3675" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -949,7 +929,6 @@
           <caret line="106" column="50" lean-forward="true" selection-start-line="106" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1494710284266" expanded="true" signature="3287:3434" ph="insert into patient... " />
           </folding>
         </state>
       </provider>
@@ -958,7 +937,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="744">
           <caret line="134" column="0" lean-forward="false" selection-start-line="134" selection-start-column="0" selection-end-line="134" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -968,13 +946,6 @@
           <caret line="101" column="65" lean-forward="false" selection-start-line="101" selection-start-column="65" selection-end-line="101" selection-end-column="65" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1494711955311" expanded="true" signature="4080:4165" ph="delete from " />
-            <marker date="1494711955311" expanded="true" signature="6466:6593" ph="select patie... Patients" />
-            <marker date="1494711955311" expanded="true" signature="9032:9073" ph="select * fro... Patients" />
-            <marker date="1494711955311" expanded="true" signature="9710:9835" ph="SELECT patie... appointment" />
-            <marker date="1494711955311" expanded="true" signature="9716:9835" ph="select patie... appointment" />
-            <marker date="1494711955311" expanded="true" signature="10189:10349" ph="SELECT Name,... patient" />
-            <marker date="1494711955311" expanded="true" signature="10206:10349" ph="select Name,... patient" />
           </folding>
         </state>
       </provider>
@@ -983,12 +954,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="713">
           <caret line="134" column="47" lean-forward="false" selection-start-line="134" selection-start-column="47" selection-end-line="134" selection-end-column="47" />
-          <folding>
-            <marker date="1494711359258" expanded="true" signature="4561:4615" ph="select * fro... Patients" />
-            <marker date="1494711359258" expanded="true" signature="5769:5827" ph="SELECT * FRO... patientPayment" />
-            <marker date="1494711359258" expanded="true" signature="5769:5831" ph="SELECT * FRO... patientPayment" />
-            <marker date="1494711359258" expanded="true" signature="5776:5818" ph="select * fro... Patients_Payment" />
-          </folding>
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
