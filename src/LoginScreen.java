@@ -36,7 +36,7 @@ public class LoginScreen extends JFrame {
             }
         });
         
-       openVideoFrame();
+     // openVideoFrame();
         
         NativeInterface.runEventPump();
         // don't forget to properly close native components
@@ -69,8 +69,8 @@ public class LoginScreen extends JFrame {
         contentPane.add(lblfizyoterapistim);
 
         JButton btnDoctorLogin = new JButton("Doctor Login");
-        Image image = new ImageIcon(this.getClass().getResource("/doctor.png")).getImage();
-        btnDoctorLogin.setIcon(new ImageIcon(image));
+        Image img1 = new ImageIcon(this.getClass().getResource("/doctor-icon.png")).getImage();
+        btnDoctorLogin.setIcon(new ImageIcon("C:\\Users\\alisi\\Desktop\\doctor-icon.png"));
         btnDoctorLogin.addActionListener(e -> {
             frame.getContentPane().removeAll();
             frame.getContentPane().add(new DoctorLoginScreen());

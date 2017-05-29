@@ -14,8 +14,7 @@ import java.util.Objects;
 public class DoctorMessageScreen extends JFrame {
     private Connection connection = null;
     private JTable tableMessages;
-    private String PatientName = "";
-    private String PatientTCNo = "";
+    private String message_From = "";
 
 
     /**
@@ -66,7 +65,7 @@ public class DoctorMessageScreen extends JFrame {
                     pst.setString(1, ID);
                     ResultSet rs = pst.executeQuery();
                     while (rs.next()) {
-                        PatientName = rs.getString("messageFrom");
+                        message_From = rs.getString("messageFrom");
                         DoctorWriteMessageScreen.DoctorMessageInput(rs.getString("messageFrom"));
                         DoctorReadMessageScreen.DoctorReadMessageInput(rs.getString("messageFrom"));
                         // PatientTCNo = rs.getString("patientID");
@@ -83,7 +82,7 @@ public class DoctorMessageScreen extends JFrame {
 
         JButton btnShow = new JButton("Show");
         btnShow.addActionListener(arg0 -> {
-            if (Objects.equals(PatientName, "") && Objects.equals(PatientTCNo, "")) {
+            if (Objects.equals(message_From, "")) {
                 JOptionPane.showMessageDialog(null, "Mesaj Secilmedi");
             } else {
                 removeAll();
@@ -98,7 +97,7 @@ public class DoctorMessageScreen extends JFrame {
 
         JButton btnReply = new JButton("Reply");
         btnReply.addActionListener(arg0 -> {
-            if (Objects.equals(PatientName, "") && Objects.equals(PatientTCNo, "")) {
+            if (Objects.equals(message_From, "")) {
                 JOptionPane.showMessageDialog(null, "Mesaj Secilmedi");
             } else {
                 removeAll();
