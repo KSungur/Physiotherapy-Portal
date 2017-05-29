@@ -9,12 +9,10 @@ class DoctorReadMessageScreen extends JPanel {
     private JTextField tvSubject;
     private JTextArea tvMessage;
 
-    private static String PatientName;
-    private static String PatientID;
+    private static String message_From;
 
-    static void DoctorReadMessageInput(String patientName, String patientTCNo) {
-        PatientName = patientName;
-        PatientID = patientTCNo;
+    static void DoctorReadMessageInput(String messageFrom) {
+        message_From = messageFrom;
     }
 
     /**
@@ -25,7 +23,7 @@ class DoctorReadMessageScreen extends JPanel {
         setLayout(null);
         setSize(600, 405);
 
-        JLabel lblPatientName = new JLabel("Name");
+        JLabel lblPatientName = new JLabel(message_From);
         lblPatientName.setBounds(10, 11, 46, 14);
         add(lblPatientName);
 
@@ -70,12 +68,11 @@ class DoctorReadMessageScreen extends JPanel {
 
     private void fillMessageText() {
         try {
-            String query = "SELECT patientID, Name, Surname " +
-                    "FROM patient " +
-                    "WHERE Name = ? AND patientID = ?";
+            String query = "SELECT * " +
+                    "FROM message " +
+                    "WHERE messageFrom = ?";
             PreparedStatement preparedStatement = connection.prepareStatement(query);
-            preparedStatement.setString(1, PatientName);
-            preparedStatement.setString(2, PatientID);
+            preparedStatement.setString(1, message_From);
             ResultSet rs = preparedStatement.executeQuery();
 
             tvSubject.setText(rs.getString("Subject"));

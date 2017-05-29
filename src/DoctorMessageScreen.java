@@ -37,7 +37,7 @@ public class DoctorMessageScreen extends JFrame {
      */
     public  DoctorMessageScreen() {
         connection = MySqlConn.dbConnector();
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
         setBounds(100, 100, 600, 405);
         setTitle("Messages");
         JPanel contentPane = new JPanel();
@@ -61,15 +61,17 @@ public class DoctorMessageScreen extends JFrame {
                     int row = tableMessages.getSelectedRow();
                     String ID = (tableMessages.getModel().getValueAt(row, 0)).toString();
                     System.out.println(ID);
-                    String query = "SELECT * FROM patient WHERE patientID = ?";
+                    String query = "SELECT * FROM messages WHERE messageFrom = ?";
                     PreparedStatement pst = connection.prepareStatement(query);
                     pst.setString(1, ID);
                     ResultSet rs = pst.executeQuery();
                     while (rs.next()) {
-                        PatientName = rs.getString("Name");
-                        PatientTCNo = rs.getString("patientID");
-                        DoctorWriteMessageScreen.DoctorMessageInput(rs.getString("Name"), rs.getString("patientID"));
-                        DoctorReadMessageScreen.DoctorReadMessageInput(rs.getString("Name"), rs.getString("patientID"));
+                        PatientName = rs.getString("messageFrom");
+                        DoctorWriteMessageScreen.DoctorMessageInput(rs.getString("messageFrom"));
+                        DoctorReadMessageScreen.DoctorReadMessageInput(rs.getString("messageFrom"));
+                        // PatientTCNo = rs.getString("patientID");
+                        //DoctorWriteMessageScreen.DoctorMessageInput(rs.getString("Name"), rs.getString("patientID"));
+                        //DoctorReadMessageScreen.DoctorReadMessageInput(rs.getString("Name"), rs.getString("patientID"));
                     }
 
                     pst.close();
@@ -82,7 +84,7 @@ public class DoctorMessageScreen extends JFrame {
         JButton btnShow = new JButton("Show");
         btnShow.addActionListener(arg0 -> {
             if (Objects.equals(PatientName, "") && Objects.equals(PatientTCNo, "")) {
-                JOptionPane.showMessageDialog(null, "Hasta Secilmedi");
+                JOptionPane.showMessageDialog(null, "Mesaj Secilmedi");
             } else {
                 removeAll();
                 getContentPane().add(new DoctorReadMessageScreen());
@@ -97,7 +99,7 @@ public class DoctorMessageScreen extends JFrame {
         JButton btnReply = new JButton("Reply");
         btnReply.addActionListener(arg0 -> {
             if (Objects.equals(PatientName, "") && Objects.equals(PatientTCNo, "")) {
-                JOptionPane.showMessageDialog(null, "Hasta Secilmedi");
+                JOptionPane.showMessageDialog(null, "Mesaj Secilmedi");
             } else {
                 removeAll();
                 getContentPane().add(new DoctorWriteMessageScreen());
@@ -112,8 +114,8 @@ public class DoctorMessageScreen extends JFrame {
 
     private void resfreshTable() {
         try {
-            String query = "SELECT patientID, Name, Surname, Message " +
-                    "FROM patient " +
+            String query = "SELECT ID, messageTo, messageFrom, Subject, Date " +
+                    "FROM messages " +
                     "ORDER BY Date";
             PreparedStatement pst = connection.prepareStatement(query);
             ResultSet rs = pst.executeQuery();

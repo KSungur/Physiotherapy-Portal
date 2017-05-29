@@ -1,3 +1,4 @@
+import javax.imageio.ImageIO;
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 
@@ -6,6 +7,7 @@ import chrriis.dj.nativeswing.swtimpl.components.JWebBrowser;
 
 import java.awt.*;
 import java.awt.event.ActionListener;
+import java.io.IOException;
 import java.awt.event.ActionEvent;
 
 public class LoginScreen extends JFrame {
@@ -55,7 +57,7 @@ public class LoginScreen extends JFrame {
         GraphicsDevice gd = GraphicsEnvironment.getLocalGraphicsEnvironment().getDefaultScreenDevice();
         int width = gd.getDisplayMode().getWidth();
         int height = gd.getDisplayMode().getHeight();
-        setBounds(100, 100, width, height);
+        setBounds(0, 0, width, height);
         contentPane = new JPanel();
         contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
         setContentPane(contentPane);
@@ -67,6 +69,8 @@ public class LoginScreen extends JFrame {
         contentPane.add(lblfizyoterapistim);
 
         JButton btnDoctorLogin = new JButton("Doctor Login");
+        Image image = new ImageIcon(this.getClass().getResource("/doctor.png")).getImage();
+        btnDoctorLogin.setIcon(new ImageIcon(image));
         btnDoctorLogin.addActionListener(e -> {
             frame.getContentPane().removeAll();
             frame.getContentPane().add(new DoctorLoginScreen());
@@ -74,7 +78,7 @@ public class LoginScreen extends JFrame {
             frame.getContentPane().invalidate();
             frame.getContentPane().revalidate();
         });
-        btnDoctorLogin.setBounds(169, 305, 293, 236);
+        btnDoctorLogin.setBounds(169, 270, 444, 330);
         contentPane.add(btnDoctorLogin);
 
         JButton btnPatientLogin = new JButton("Patient Login");

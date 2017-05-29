@@ -15,13 +15,12 @@ public class DoctorWriteMessageScreen extends JPanel {
     private JTextArea tvMessage;
 
 
-    private static String PatientName;
+    private static String messageFrom;
     private static String PatientID;
 
 
-    static void DoctorMessageInput(String patientName, String patientTCNo) {
-        PatientName = patientName;
-        PatientID = patientTCNo;
+    static void DoctorMessageInput(String messageFrom) {
+        messageFrom = messageFrom;
     }
 
     /**
@@ -37,18 +36,17 @@ public class DoctorWriteMessageScreen extends JPanel {
             int reply = JOptionPane.showConfirmDialog(null, "Sending message?", "Confirm", JOptionPane.YES_NO_OPTION);
             if (reply == JOptionPane.YES_OPTION) {
                 try {
-                    String query = "INSERT INTO messages (messageTo, Name, Surname, Subject, Content, Date) VALUES (?, ?, ?, ?, ?, ?)";
+                    String query = "INSERT INTO messages (messageTo,, Subject, Content, Date, messageFrom) VALUES (?, ?, ?, ?, ?, ?)";
 
                     DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd");
                     LocalDate localDate = LocalDate.now();
 
                     PreparedStatement preparedStatement = connection.prepareStatement(query);
-                    preparedStatement.setString(1, lblPatientID.getText());
+                    preparedStatement.setString(1, messageFrom);
                     preparedStatement.setString(2, lblPatientName.getText());
-                    preparedStatement.setString(3, lblPatientSurname.getText());
-                    preparedStatement.setString(4, tvSubject.getText());
-                    preparedStatement.setString(5, tvMessage.getText());
-                    preparedStatement.setString(6, dtf.format(localDate));
+                    preparedStatement.setString(3, tvMessage.getText());
+                    preparedStatement.setString(5, "Doctor");
+                    preparedStatement.setString(4, dtf.format(localDate));
 
                     preparedStatement.execute();
                     JOptionPane.showMessageDialog(null, "Message sent");
@@ -93,7 +91,7 @@ public class DoctorWriteMessageScreen extends JPanel {
         lblPatientID = new JLabel("PatientID");
         lblPatientID.setBounds(10, 61, 46, 14);
         add(lblPatientID);
-        fillPatientInfo();
+       // fillPatientInfo();
     }
 
     private void fillPatientInfo() {
