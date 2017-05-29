@@ -15,7 +15,7 @@ public class DoctorMessageScreen extends JFrame {
     private Connection connection = null;
     private JTable tableMessages;
     private String message_From = "";
-
+    private String date = "";
 
     /**
      * Launch the application.
@@ -59,18 +59,20 @@ public class DoctorMessageScreen extends JFrame {
                 try {
                     int row = tableMessages.getSelectedRow();
                     String ID = (tableMessages.getModel().getValueAt(row, 0)).toString();
+                    String dt = (tableMessages.getModel().getValueAt(row, 3)).toString();
                     System.out.println(ID);
-                    String query = "SELECT * FROM messages WHERE messageFrom = ?";
+                    String query = "SELECT * FROM messages WHERE messageFrom = ? and DATE = ?";
                     PreparedStatement pst = connection.prepareStatement(query);
                     pst.setString(1, ID);
+                    pst.setString(2, dt);
                     ResultSet rs = pst.executeQuery();
                     while (rs.next()) {
                         message_From = rs.getString("messageFrom");
                         DoctorWriteMessageScreen.DoctorMessageInput(rs.getString("messageFrom"));
                         DoctorReadMessageScreen.DoctorReadMessageInput(rs.getString("messageFrom"));
-                        // PatientTCNo = rs.getString("patientID");
-                        //DoctorWriteMessageScreen.DoctorMessageInput(rs.getString("Name"), rs.getString("patientID"));
-                        //DoctorReadMessageScreen.DoctorReadMessageInput(rs.getString("Name"), rs.getString("patientID"));
+                        date = rs.getString("Date");
+                        DoctorReadMessageScreen.DoctorReadMessageDate(date);
+                        DoctorWriteMessageScreen.DoctorMessageDate(date);
                     }
 
                     pst.close();
@@ -113,8 +115,9 @@ public class DoctorMessageScreen extends JFrame {
 
     private void resfreshTable() {
         try {
-            String query = "SELECT ID, messageTo, messageFrom, Subject, Date " +
+            String query = "SELECT messageFrom, Subject, Content, Date " +
                     "FROM messages " +
+                    "WHERE messageTo = " + DoctorMainScreen.DoctorName + " " +
                     "ORDER BY Date";
             PreparedStatement pst = connection.prepareStatement(query);
             ResultSet rs = pst.executeQuery();

@@ -19,7 +19,7 @@ public class DoctorMainScreen extends JPanel {
     private JTable tablePatients;
     private JTable tableAppointment;
 
-    private static String DoctorName;
+    public static String DoctorName;
 
     static void Doctorinput(String doctorName) {
         DoctorName = doctorName;

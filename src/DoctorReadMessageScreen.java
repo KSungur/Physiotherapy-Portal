@@ -10,10 +10,12 @@ class DoctorReadMessageScreen extends JPanel {
     private JTextArea tvMessage;
 
     private static String message_From;
+    private static String date;
 
     static void DoctorReadMessageInput(String messageFrom) {
         message_From = messageFrom;
     }
+    static void DoctorReadMessageDate(String msgDate) { date = msgDate; }
 
     /**
      * Create the panel.
@@ -68,16 +70,19 @@ class DoctorReadMessageScreen extends JPanel {
 
     private void fillMessageText() {
         try {
-            String query = "SELECT * " +
-                    "FROM message " +
-                    "WHERE messageFrom = ?";
+            String query = "SELECT Subject, Content " +
+                    "FROM messages " +
+                    "WHERE messageFrom = ? and Date = ?";
             PreparedStatement preparedStatement = connection.prepareStatement(query);
             preparedStatement.setString(1, message_From);
+            preparedStatement.setString(2, date);
             ResultSet rs = preparedStatement.executeQuery();
-
-            tvSubject.setText(rs.getString("Subject"));
-            tvMessage.setText(rs.getString("Message"));
-
+            while(rs.next()) {
+                String subject =rs.getString("Subject");
+                String content = rs.getString("Content");
+                tvSubject.setText(subject);
+                tvMessage.setText(content);
+            }
         } catch (Exception e) {
             e.printStackTrace();
         }

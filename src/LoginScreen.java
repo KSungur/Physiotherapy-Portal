@@ -69,8 +69,8 @@ public class LoginScreen extends JFrame {
         contentPane.add(lblfizyoterapistim);
 
         JButton btnDoctorLogin = new JButton("Doctor Login");
-        Image img1 = new ImageIcon(this.getClass().getResource("/doctor-icon.png")).getImage();
-        btnDoctorLogin.setIcon(new ImageIcon("C:\\Users\\alisi\\Desktop\\doctor-icon.png"));
+        Image img1 = new ImageIcon(this.getClass().getResource("/doctor.png")).getImage();
+        btnDoctorLogin.setIcon(new ImageIcon("/doctor.png"));
         btnDoctorLogin.addActionListener(e -> {
             frame.getContentPane().removeAll();
             frame.getContentPane().add(new DoctorLoginScreen());

@@ -17,11 +17,16 @@ public class DoctorWriteMessageScreen extends JPanel {
 
     private static String messageFrom;
     private static String PatientID;
+    private static String date;
 
 
     static void DoctorMessageInput(String messageFrom) {
         messageFrom = messageFrom;
     }
+    static void DoctorMessageDate(String msgDate) {
+        date = msgDate;
+    }
+
 
     /**
      * Create the panel.

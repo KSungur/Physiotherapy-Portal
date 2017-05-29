@@ -48,7 +48,7 @@ public class PatientAddScreen extends JFrame {
 	 * Create the frame.
 	 */
 	public PatientAddScreen() {
-		connection = sqliteConnection.dbConnector();
+		connection = MySqlConn.dbConnector();
 		setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
 		setBounds(100, 100, 450, 489);
 		contentPane = new JPanel();
