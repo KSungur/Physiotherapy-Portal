@@ -143,6 +143,16 @@ public class PatientMainScreen extends JPanel  {
 		});
 		btnVideo.setBounds(63, 38, 89, 23);
 		panel.add(btnVideo);
+		
+		JButton btnMessage = new JButton("Message");
+		btnMessage.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				PatientMessageScreen patientMessageScreen = new PatientMessageScreen();
+				patientMessageScreen.setVisible(true);
+			}
+		});
+		btnMessage.setBounds(670, 0, 269, 103);
+		add(btnMessage);
 
 	}
 }

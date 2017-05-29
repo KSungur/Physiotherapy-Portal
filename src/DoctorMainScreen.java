@@ -10,6 +10,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.awt.event.ActionListener;
 
 public class DoctorMainScreen extends JPanel {
     private Connection connection = null;
@@ -204,6 +205,16 @@ public class DoctorMainScreen extends JPanel {
 
         tableAppointment = new JTable();
         scrollPane_1.setViewportView(tableAppointment);
+        
+        JButton btnMessages = new JButton("Messages");
+        btnMessages.addActionListener(new ActionListener() {
+        	public void actionPerformed(ActionEvent arg0) {
+        		DoctorMessageScreen doctorMessageScreen = new DoctorMessageScreen();
+        		doctorMessageScreen.setVisible(true);
+        	}
+        });
+        btnMessages.setBounds(596, 25, 200, 40);
+        add(btnMessages);
         resfreshTable();
         AppointmentTableRefresh();
 

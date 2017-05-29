@@ -35,7 +35,7 @@ public class DoctorMessageScreen extends JFrame {
     /**
      * Create the frame.
      */
-    private DoctorMessageScreen() {
+    public  DoctorMessageScreen() {
         connection = MySqlConn.dbConnector();
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setBounds(100, 100, 600, 405);
