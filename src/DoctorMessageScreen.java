@@ -88,7 +88,9 @@ public class DoctorMessageScreen extends JFrame {
                 JOptionPane.showMessageDialog(null, "Mesaj Secilmedi");
             } else {
                 removeAll();
-                getContentPane().add(new DoctorReadMessageScreen());
+//                getContentPane().add(new DoctorReadMessageScreen());
+                DoctorReadMessageScreen doctorReadMessageScreen = new DoctorReadMessageScreen();
+                doctorReadMessageScreen.setVisible(true);
                 repaint();
                 invalidate();
                 revalidate();

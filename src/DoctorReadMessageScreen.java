@@ -4,7 +4,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
-class DoctorReadMessageScreen extends JPanel {
+public class DoctorReadMessageScreen extends JPanel {
     private Connection connection;
     private JTextField tvSubject;
     private JTextArea tvMessage;
@@ -20,7 +20,7 @@ class DoctorReadMessageScreen extends JPanel {
     /**
      * Create the panel.
      */
-    DoctorReadMessageScreen() {
+    public DoctorReadMessageScreen() {
         connection = MySqlConn.dbConnector();
         setLayout(null);
         setSize(600, 405);

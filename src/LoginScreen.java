@@ -15,14 +15,14 @@ public class LoginScreen extends JFrame {
     public static LoginScreen frame;
     private static JPanel contentPane;
     public static JFrame videoFrame;
-    public static String videolink ;
-    
-    
-    public static void openVideoFrame(){
-    	videoFrame = new JFrame("YouTube Viewer");
-    	
+    public static String videolink;
+
+
+    public static void openVideoFrame() {
+        videoFrame = new JFrame("YouTube Viewer");
+
     }
-    
+
     /**
      * Launch the application.
      */
@@ -35,9 +35,9 @@ public class LoginScreen extends JFrame {
                 e.printStackTrace();
             }
         });
-        
-     // openVideoFrame();
-        
+
+        // openVideoFrame();
+
         NativeInterface.runEventPump();
         // don't forget to properly close native components
         Runtime.getRuntime().addShutdownHook(new Thread(new Runnable() {
@@ -46,7 +46,7 @@ public class LoginScreen extends JFrame {
                 NativeInterface.close();
             }
         }));
-  
+
     }
 
     /**
@@ -91,65 +91,58 @@ public class LoginScreen extends JFrame {
         });
         btnPatientLogin.setBounds(890, 305, 293, 236);
         contentPane.add(btnPatientLogin);
-        
-        JButton btnVideo = new JButton("Video");
-        btnVideo.addActionListener(new ActionListener() {
-        	public void actionPerformed(ActionEvent e) {
-        	
-        		 videoFrame.dispose();
-        		 videoFrame = new JFrame("YouTube Viewer");
-        		videolink="https://www.youtube.com/v/_IeVQZiAsqU?fs=1";
-        	
 
-        	      NativeInterface.open();
-        	        SwingUtilities.invokeLater(new Runnable() {
-        	            public void run() {
-        	               
-        	                videoFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-        	                videoFrame.getContentPane().add(getBrowserPanel(), BorderLayout.CENTER);
-        	                videoFrame.setSize(800, 600);
-        	                videoFrame.setLocationByPlatform(true);
-        	                
-        	            }
-        	        });
-        	      
-        		
-        		videoFrame.setVisible(true);
-        	}
+        JButton btnVideo = new JButton("Video");
+        btnVideo.addActionListener(e -> {
+
+            videoFrame.dispose();
+            videoFrame = new JFrame("YouTube Viewer");
+            videolink = "https://www.youtube.com/v/_IeVQZiAsqU?fs=1";
+
+
+            NativeInterface.open();
+            SwingUtilities.invokeLater(() -> {
+
+                videoFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+                videoFrame.getContentPane().add(getBrowserPanel(), BorderLayout.CENTER);
+                videoFrame.setSize(800, 600);
+                videoFrame.setLocationByPlatform(true);
+
+            });
+
+
+            videoFrame.setVisible(true);
         });
         btnVideo.setBounds(169, 46, 89, 23);
         contentPane.add(btnVideo);
-        
+
         JButton btnVideo_1 = new JButton("Video2");
         btnVideo_1.addActionListener(new ActionListener() {
-        	public void actionPerformed(ActionEvent e) {
-        		
-        		 videoFrame.dispose();
-        		 videoFrame = new JFrame("YouTube Viewer");
-        		videolink="https://www.youtube.com/v/xZ2T4CQbwL8?fs=1";
-            	
+            public void actionPerformed(ActionEvent e) {
 
-      	      NativeInterface.open();
-      	        SwingUtilities.invokeLater(new Runnable() {
-      	            public void run() {
-      	               
-      	            	 videoFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-     	                videoFrame.getContentPane().add(getBrowserPanel(), BorderLayout.CENTER);
-     	                videoFrame.setSize(800, 600);
-     	                videoFrame.setLocationByPlatform(true);
-      	                
-      	            }
-      	        });
-      	      
-      		
-      		videoFrame.setVisible(true);
-        	}
+                videoFrame.dispose();
+                videoFrame = new JFrame("YouTube Viewer");
+                videolink = "https://www.youtube.com/v/xZ2T4CQbwL8?fs=1";
+
+
+                NativeInterface.open();
+                SwingUtilities.invokeLater(() -> {
+
+                    videoFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+                    videoFrame.getContentPane().add(getBrowserPanel(), BorderLayout.CENTER);
+                    videoFrame.setSize(800, 600);
+                    videoFrame.setLocationByPlatform(true);
+
+                });
+
+
+                videoFrame.setVisible(true);
+            }
         });
         btnVideo_1.setBounds(169, 78, 89, 23);
         contentPane.add(btnVideo_1);
     }
-    
-  
+
 
     public static JPanel getBrowserPanel() {
         JPanel webBrowserPanel = new JPanel(new BorderLayout());
