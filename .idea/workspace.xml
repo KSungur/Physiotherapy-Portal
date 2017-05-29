@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bd2d0cda-7ac1-4b58-a22a-040a7c2de4de" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/C__/Users/alisi/Desktop/Software/Java/Physiotherapy-Portal/PhysiotherapyPortalDatabase.sqlite" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/SqlConnection.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/sqliteConnection.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -680,12 +677,12 @@
       <workItem from="1494692560844" duration="212000" />
       <workItem from="1494692789930" duration="3378000" />
       <workItem from="1494701084186" duration="10893000" />
-      <workItem from="1496078388632" duration="397000" />
+      <workItem from="1496078388632" duration="478000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14880000" />
+    <option name="totallyTimeSpent" value="14961000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
