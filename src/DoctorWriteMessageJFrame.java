@@ -47,10 +47,10 @@ public class DoctorWriteMessageJFrame extends JFrame {
         setContentPane(contentPane);
         contentPane.setLayout(null);
 
-        JLabel lblMessageFrom = new JLabel("Message From");
-        lblMessageFrom.setBounds(10, 11, 107, 14);
+        JLabel lblMessageFrom = new JLabel();
+        lblMessageFrom.setBounds(10, 11, 300, 14);
         contentPane.add(lblMessageFrom);
-        lblMessageFrom.setText(message_From);
+        lblMessageFrom.setText("Message From: "+message_From);
 
         JLabel lblNewLabel_1 = new JLabel("Subject");
         lblNewLabel_1.setBounds(10, 36, 46, 14);

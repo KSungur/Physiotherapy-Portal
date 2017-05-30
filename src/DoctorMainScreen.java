@@ -72,17 +72,17 @@ public class DoctorMainScreen extends JPanel {
         btnEdit.addActionListener(e -> {
             PatientEditScreen patientEditScreen = new PatientEditScreen();
             int row = tablePatients.getSelectedRow();
-            String PatientName = (tablePatients.getModel().getValueAt(row, 0)).toString();
-            String PatientSurname = (tablePatients.getModel().getValueAt(row, 1)).toString();
-            String PatientTCNo = (tablePatients.getModel().getValueAt(row, 2)).toString();
-            String PatientPhone = (tablePatients.getModel().getValueAt(row, 3)).toString();
-            String PatientGender = (tablePatients.getModel().getValueAt(row, 4)).toString();
+//            String PatientTCNO = (tablePatients.getModel().getValueAt(row, 0)).toString();
+            String PatientName = (tablePatients.getModel().getValueAt(row, 1)).toString();
+            String PatientSurname = (tablePatients.getModel().getValueAt(row, 2)).toString();
+            String PatientGender = (tablePatients.getModel().getValueAt(row, 3)).toString();
+            String PatientPhone = (tablePatients.getModel().getValueAt(row, 4)).toString();
             String PatientBirth = (tablePatients.getModel().getValueAt(row, 5)).toString();
             String PatientEmail = (tablePatients.getModel().getValueAt(row, 6)).toString();
             String PatientAdres = (tablePatients.getModel().getValueAt(row, 7)).toString();
             String PatientRecordDate = (tablePatients.getModel().getValueAt(row, 8)).toString();
 
-            patientEditScreen.input(PatientName, PatientSurname, PatientTCNo, PatientPhone, PatientGender, PatientBirth, PatientEmail, PatientAdres, PatientRecordDate);
+            patientEditScreen.input(PatientName, PatientSurname, PatientGender,PatientPhone, PatientBirth, PatientEmail, PatientAdres, PatientRecordDate);
             patientEditScreen.setVisible(true);
             tvPatientName.setText("");
             tvPatientID.setText("");

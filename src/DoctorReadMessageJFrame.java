@@ -48,11 +48,11 @@ public class DoctorReadMessageJFrame extends JFrame {
 		contentPane.setLayout(null);
 		
 		lblMessageFrom = new JLabel("Message From");
-		lblMessageFrom.setBounds(10, 11, 91, 14);
+		lblMessageFrom.setBounds(10, 11, 400, 14);
 		contentPane.add(lblMessageFrom);
 		
 		lblSubject = new JLabel("Subject");
-		lblSubject.setBounds(10, 46, 46, 14);
+		lblSubject.setBounds(10, 46, 400, 14);
 		contentPane.add(lblSubject);
 		
 		JScrollPane scrollPane = new JScrollPane();
@@ -87,9 +87,9 @@ public class DoctorReadMessageJFrame extends JFrame {
                 String subject =rs.getString("Subject");
                 String content = rs.getString("Content");
                 String messageFrom = rs.getString("messageFrom");
-                lblSubject.setText(subject);
+                lblSubject.setText("Subject:" + subject);
                 tvMessage.setText(content);
-                lblMessageFrom.setText(messageFrom);
+                lblMessageFrom.setText("Message From:" + messageFrom);
             }
         } catch (Exception e) {
             e.printStackTrace();

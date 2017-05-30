@@ -71,8 +71,8 @@ public class DoctorMessageScreen extends JFrame {
                         date = rs.getString("Date");
                         DoctorWriteMessageJFrame.DoctorWriteMessageInput(rs.getString("messageFrom"));
                         DoctorReadMessageJFrame.DoctorReadMessageInput(rs.getString("messageFrom"), date);
-                        date = rs.getString("Date");
-                        DoctorWriteMessageJFrame.DoctorWriteMessageInput(date);
+//                        date = rs.getString("Date");
+//                        DoctorWriteMessageJFrame.DoctorWriteMessageInput(date);
                     }
 
                     pst.close();

@@ -23,16 +23,15 @@ public class PatientEditScreen extends JFrame {
     private JTextField tvAdres;
 
 
-    public void input(String patientName, String patientSurname, String patientTCNo, String patientPhone,
+    public void input(String patientName, String patientSurname, String patientPhone,
                       String patientGender, String patientBirth, String patientEmail, String patientAdres,
                       String patientRecordDate) {
-        this.PatientName = patientName;
-        this.PatientSurname = patientSurname;
+//        this.PatientName = patientName;
+//        this.PatientSurname = patientSurname;
 //        this.PatientTCNo = patientTCNo;
 
         tvPatientName.setText(patientName);
         tvPatientSurname.setText(patientSurname);
-//        tvPatientTC.setText(patientTCNo);
         tvPatientPhone.setText(patientPhone);
         tvGender.setText(patientGender);
         tvBirthDate.setText(patientBirth);
@@ -112,12 +111,12 @@ public class PatientEditScreen extends JFrame {
         JButton btnSave = new JButton("Save");
         btnSave.addActionListener(e -> {
             try {
-                String query = "update patient set Name =?, Surname=?, Phone=?, Gender=?, Birth=?, Email=?, Address=?, RecordDate=? where Name = ? and Surname = ? and patientID = ?";
+                String query = "update patient set Name =?, Surname=?, Phone=?, Gender=?, Birth=?, Email=?, Address=?, RecordDate=? where patientID = ?";
                 PreparedStatement preparedStatement = connection.prepareStatement(query);
 
                 preparedStatement.setString(1, tvPatientName.getText());
                 preparedStatement.setString(2, tvPatientSurname.getText());
-//                    preparedStatement.setString(3, tvPatientTC.getText());
+                //                    preparedStatement.setString(3, tvPatientTC.getText());
                 preparedStatement.setString(3, tvPatientPhone.getText());
                 preparedStatement.setString(4, tvGender.getText());
                 preparedStatement.setString(5, tvBirthDate.getText());
@@ -125,9 +124,9 @@ public class PatientEditScreen extends JFrame {
                 preparedStatement.setString(7, tvAdres.getText());
                 preparedStatement.setString(8, tvRecordDate.getText());
 
-                preparedStatement.setString(9, PatientName);
-                preparedStatement.setString(10, PatientSurname);
-                preparedStatement.setString(11, PatientTCNo);
+//                preparedStatement.setString(9, PatientName);
+//                preparedStatement.setString(10, PatientSurname);
+                preparedStatement.setString(9, PatientTCNo);
 //                    preparedStatement.setString(12, PatientTCNo);
 
                 preparedStatement.execute();
