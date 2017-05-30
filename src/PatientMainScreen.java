@@ -139,13 +139,23 @@ class PatientMainScreen extends JPanel {
         btnVideo.setBounds(63, 38, 89, 23);
         panel.add(btnVideo);
 
-        JButton btnMessage = new JButton("Message");
+
+        JButton btnMessage = new JButton("Compose");
         btnMessage.addActionListener(arg0 -> {
             PatientMessageScreen patientMessageScreen = new PatientMessageScreen();
             patientMessageScreen.setVisible(true);
         });
         btnMessage.setBounds(670, 0, 269, 103);
         add(btnMessage);
+
+
+        JButton btnReadMSG = new JButton("Inbox");
+        btnReadMSG.addActionListener(arg0 -> {
+            PatientReadMessage patientReadMessage = new PatientReadMessage();
+            patientReadMessage.setVisible(true);
+        });
+        btnReadMSG.setBounds(670, 150, 269, 103);
+        add(btnReadMSG);
 
         try {
             String query = "SELECT * FROM patient WHERE patientID = " + PatientMainScreen.PatientName;
