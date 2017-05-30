@@ -2,9 +2,12 @@ import chrriis.dj.nativeswing.swtimpl.NativeInterface;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 class PatientMainScreen extends JPanel {
 
@@ -182,5 +185,58 @@ class PatientMainScreen extends JPanel {
         } catch (Exception e2) {
             JOptionPane.showMessageDialog(null, e2);
         }
+
+        JButton btnPayment = new JButton("Make Payment");
+        btnPayment.addActionListener((ActionEvent arg0) -> {
+            try {
+                String query = "INSERT INTO patientPayment (patientID, Date, Type, Amount) VALUES (?, ?, ?, ?)";
+
+                DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+                LocalDateTime localDate = LocalDateTime.now();
+                float amount = 400.50f;
+                String type = "Credit Card";
+                PreparedStatement preparedStatement = connection.prepareStatement(query);
+                preparedStatement.setString(1, PatientMainScreen.PatientName);
+                preparedStatement.setString(2, dtf.format(localDate));
+                preparedStatement.setString(3, type);
+                preparedStatement.setFloat(4, amount);
+                System.out.println(preparedStatement);
+                preparedStatement.execute();
+                JOptionPane.showMessageDialog(null, "Payment Processed. Please Contact to your Bank to approve the payment.");
+                preparedStatement.close();
+
+            } catch (Exception e2) {
+                JOptionPane.showMessageDialog(null, e2);
+            }
+        });
+        btnPayment.setBounds(970, 0, 269, 103);
+        add(btnPayment);
+
+
+
+        JButton btnAppointment = new JButton("Make Payment");
+        btnPayment.addActionListener((ActionEvent arg0) -> {
+            try {
+                String query = "INSERT INTO appointment (patientID, employeeID, appointmentDate) VALUES (?, ?, ?)";
+
+                DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+                LocalDateTime localDate = LocalDateTime.now();
+
+                PreparedStatement preparedStatement = connection.prepareStatement(query);
+                preparedStatement.setString(1, PatientMainScreen.PatientName);
+                preparedStatement.setString(2, );
+                preparedStatement.setString(3, type);
+                preparedStatement.setFloat(4, amount);
+                System.out.println(preparedStatement);
+                preparedStatement.execute();
+                JOptionPane.showMessageDialog(null, "Payment Processed. Please Contact to your Bank to approve the payment.");
+                preparedStatement.close();
+
+            } catch (Exception e2) {
+                JOptionPane.showMessageDialog(null, e2);
+            }
+        });
+        btnAppointment.setBounds(970, 0, 269, 103);
+        add(btnAppointment);
     }
 }

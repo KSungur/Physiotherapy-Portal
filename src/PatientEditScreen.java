@@ -23,17 +23,17 @@ public class PatientEditScreen extends JFrame {
     private JTextField tvAdres;
 
 
-    public void input(String patientName, String patientSurname, String patientPhone,
-                      String patientGender, String patientBirth, String patientEmail, String patientAdres,
-                      String patientRecordDate) {
+    public void input(String patientTCNo, String patientName, String patientSurname,
+                      String patientGender, String patientPhone, String patientBirth,
+                      String patientEmail, String patientAdres, String patientRecordDate) {
 //        this.PatientName = patientName;
 //        this.PatientSurname = patientSurname;
-//        this.PatientTCNo = patientTCNo;
+        this.PatientTCNo = patientTCNo;
 
         tvPatientName.setText(patientName);
         tvPatientSurname.setText(patientSurname);
-        tvPatientPhone.setText(patientPhone);
         tvGender.setText(patientGender);
+        tvPatientPhone.setText(patientPhone);
         tvBirthDate.setText(patientBirth);
         tvEmail.setText(patientEmail);
         tvAdres.setText(patientAdres);
@@ -72,16 +72,16 @@ public class PatientEditScreen extends JFrame {
         contentPane.add(lblPatientEditScreen);
 
         JLabel lblPatientName = new JLabel("Name");
-        lblPatientName.setBounds(90, 47, 80, 16);
+        lblPatientName.setBounds(90, 47, 80, 22);
         contentPane.add(lblPatientName);
 
         tvPatientName = new JTextField();
-        tvPatientName.setBounds(181, 44, 116, 22);
+        tvPatientName.setBounds(181, 47, 116, 22);
         contentPane.add(tvPatientName);
         tvPatientName.setColumns(10);
 
         JLabel lblPatientSurname = new JLabel("Surname");
-        lblPatientSurname.setBounds(90, 79, 80, 16);
+        lblPatientSurname.setBounds(90, 76, 80, 22);
         contentPane.add(lblPatientSurname);
 
         tvPatientSurname = new JTextField();
@@ -89,22 +89,13 @@ public class PatientEditScreen extends JFrame {
         tvPatientSurname.setBounds(181, 76, 116, 22);
         contentPane.add(tvPatientSurname);
 
-//        JLabel lblPatientTC = new JLabel("ID");
-//        lblPatientTC.setBounds(90, 111, 80, 16);
-//        contentPane.add(lblPatientTC);
-
-//        tvPatientTC = new JTextField();
-//        tvPatientTC.setColumns(10);
-//        tvPatientTC.setBounds(181, 108, 116, 22);
-//        contentPane.add(tvPatientTC);
-
         JLabel lblPatientPhone = new JLabel("Phone");
-        lblPatientPhone.setBounds(90, 143, 80, 16);
+        lblPatientPhone.setBounds(90, 105, 80, 22);
         contentPane.add(lblPatientPhone);
 
         tvPatientPhone = new JTextField();
         tvPatientPhone.setColumns(10);
-        tvPatientPhone.setBounds(181, 140, 116, 22);
+        tvPatientPhone.setBounds(181, 105, 116, 22);
         contentPane.add(tvPatientPhone);
 
 
@@ -138,52 +129,52 @@ public class PatientEditScreen extends JFrame {
             }
 
         });
-        btnSave.setBounds(182, 332, 97, 25);
+        btnSave.setBounds(182, 300, 97, 25);
         contentPane.add(btnSave);
 
         JLabel lblGender = new JLabel("Gender");
-        lblGender.setBounds(90, 175, 56, 16);
+        lblGender.setBounds(90, 134, 56, 22);
         contentPane.add(lblGender);
 
         tvGender = new JTextField();
         tvGender.setColumns(10);
-        tvGender.setBounds(181, 172, 116, 22);
+        tvGender.setBounds(181, 134, 116, 22);
         contentPane.add(tvGender);
 
         JLabel lblBirthdate = new JLabel("Birth Date");
-        lblBirthdate.setBounds(90, 207, 120, 16);
+        lblBirthdate.setBounds(90, 163, 120, 22);
         contentPane.add(lblBirthdate);
 
         tvBirthDate = new JTextField();
         tvBirthDate.setColumns(10);
-        tvBirthDate.setBounds(181, 204, 116, 22);
+        tvBirthDate.setBounds(181, 163, 116, 22);
         contentPane.add(tvBirthDate);
 
         JLabel lblEmail = new JLabel("Email");
-        lblEmail.setBounds(90, 239, 80, 16);
+        lblEmail.setBounds(90, 192, 80, 22);
         contentPane.add(lblEmail);
 
         tvEmail = new JTextField();
         tvEmail.setColumns(10);
-        tvEmail.setBounds(181, 236, 116, 22);
+        tvEmail.setBounds(181, 192, 116, 22);
         contentPane.add(tvEmail);
 
         JLabel lblRecorddate = new JLabel("RecordDate");
-        lblRecorddate.setBounds(90, 300, 120, 16);
+        lblRecorddate.setBounds(90, 221, 120, 22);
         contentPane.add(lblRecorddate);
 
         tvRecordDate = new JTextField();
         tvRecordDate.setColumns(10);
-        tvRecordDate.setBounds(181, 297, 116, 22);
+        tvRecordDate.setBounds(181, 221, 116, 22);
         contentPane.add(tvRecordDate);
 
         JLabel lblAdres = new JLabel("Address");
-        lblAdres.setBounds(90, 271, 120, 16);
+        lblAdres.setBounds(90, 250, 120, 22);
         contentPane.add(lblAdres);
 
         tvAdres = new JTextField();
         tvAdres.setColumns(10);
-        tvAdres.setBounds(181, 268, 116, 22);
+        tvAdres.setBounds(181, 250, 116, 22);
         contentPane.add(tvAdres);
     }
 

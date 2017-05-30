@@ -100,12 +100,6 @@ public class PatientLoginScreen extends JPanel {
         });
         btnPatientSignup.setBounds(480, 327, 97, 25);
         add(btnPatientSignup);
-
-
-        JCheckBox checkPatient = new JCheckBox("Remember Me");
-        checkPatient.setBounds(383, 390, 150, 25);
-        add(checkPatient);
-
     }
 
 }

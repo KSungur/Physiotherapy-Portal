@@ -72,7 +72,7 @@ public class DoctorMainScreen extends JPanel {
         btnEdit.addActionListener(e -> {
             PatientEditScreen patientEditScreen = new PatientEditScreen();
             int row = tablePatients.getSelectedRow();
-//            String PatientTCNO = (tablePatients.getModel().getValueAt(row, 0)).toString();
+            String PatientTCNO = (tablePatients.getModel().getValueAt(row, 0)).toString();
             String PatientName = (tablePatients.getModel().getValueAt(row, 1)).toString();
             String PatientSurname = (tablePatients.getModel().getValueAt(row, 2)).toString();
             String PatientGender = (tablePatients.getModel().getValueAt(row, 3)).toString();
@@ -82,7 +82,7 @@ public class DoctorMainScreen extends JPanel {
             String PatientAdres = (tablePatients.getModel().getValueAt(row, 7)).toString();
             String PatientRecordDate = (tablePatients.getModel().getValueAt(row, 8)).toString();
 
-            patientEditScreen.input(PatientName, PatientSurname, PatientGender,PatientPhone, PatientBirth, PatientEmail, PatientAdres, PatientRecordDate);
+            patientEditScreen.input(PatientTCNO,PatientName, PatientSurname, PatientGender,PatientPhone, PatientBirth, PatientEmail, PatientAdres, PatientRecordDate);
             patientEditScreen.setVisible(true);
             tvPatientName.setText("");
             tvPatientID.setText("");
@@ -175,7 +175,7 @@ public class DoctorMainScreen extends JPanel {
         JButton btnShowPatientPayments = new JButton("Patient's Payments");
         btnShowPatientPayments.addActionListener(arg0 -> {
             if (tvPatientID.getText().length() == 0 && tvPatientName.getText().length() == 0) {
-                JOptionPane.showMessageDialog(null, "Textboxlar bos");
+                JOptionPane.showMessageDialog(null, "Please specify a patient.");
             } else {
                 PatientPayments.Patientinput(tvPatientName.getText(), tvPatientID.getText());
                 PatientPayments patientPayments = new PatientPayments();
