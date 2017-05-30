@@ -69,6 +69,8 @@ public class DoctorMainScreen extends JPanel {
 
         JButton btnEdit = new JButton("Edit");
         btnEdit.setBounds(0, 25, 200, 40);
+        Image edit = new ImageIcon(this.getClass().getResource("/edit.png")).getImage().getScaledInstance(24,24,0);
+        btnEdit.setIcon(new ImageIcon(edit));
         btnEdit.addActionListener(e -> {
             PatientEditScreen patientEditScreen = new PatientEditScreen();
             int row = tablePatients.getSelectedRow();
@@ -91,6 +93,8 @@ public class DoctorMainScreen extends JPanel {
         add(btnEdit);
 
         JButton btnDelete = new JButton("Delete");
+        Image delete = new ImageIcon(this.getClass().getResource("/delete.png")).getImage().getScaledInstance(24,24,0);;
+        btnDelete.setIcon(new ImageIcon(delete));
         btnDelete.setBounds(199, 25, 200, 40);
         btnDelete.addActionListener(e -> {
             int reply = JOptionPane.showConfirmDialog(null, "Are you sure you want to delete the record?", "Alert", JOptionPane.YES_NO_OPTION);
@@ -120,6 +124,8 @@ public class DoctorMainScreen extends JPanel {
         add(btnDelete);
 
         JButton btnRefresh = new JButton("Refresh");
+        Image refresh = new ImageIcon(this.getClass().getResource("/refresh.png")).getImage().getScaledInstance(24,24,0);;
+        btnRefresh.setIcon(new ImageIcon(refresh));
         btnRefresh.setBounds(397, 25, 200, 40);
         btnRefresh.addActionListener((ActionEvent e) -> {
             resfreshTable();
@@ -173,6 +179,8 @@ public class DoctorMainScreen extends JPanel {
         pnlPatientSearch.add(btnSearchPatient);
 
         JButton btnShowPatientPayments = new JButton("Patient's Payments");
+        Image payment = new ImageIcon(this.getClass().getResource("/payment.png")).getImage().getScaledInstance(24,24,0);
+        btnShowPatientPayments.setIcon(new ImageIcon(payment));
         btnShowPatientPayments.addActionListener(arg0 -> {
             if (tvPatientID.getText().length() == 0 && tvPatientName.getText().length() == 0) {
                 JOptionPane.showMessageDialog(null, "Please specify a patient.");
@@ -206,6 +214,8 @@ public class DoctorMainScreen extends JPanel {
         scrollPane_1.setViewportView(tableAppointment);
         
         JButton btnMessages = new JButton("Messages");
+        Image message = new ImageIcon(this.getClass().getResource("/message.png")).getImage().getScaledInstance(24,24,0);;
+        btnMessages.setIcon(new ImageIcon(message));
         btnMessages.addActionListener(arg0 -> {
             DoctorMessageScreen doctorMessageScreen = new DoctorMessageScreen();
             doctorMessageScreen.setVisible(true);

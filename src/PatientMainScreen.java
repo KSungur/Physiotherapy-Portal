@@ -214,29 +214,29 @@ class PatientMainScreen extends JPanel {
 
 
 
-        JButton btnAppointment = new JButton("Make Payment");
-        btnPayment.addActionListener((ActionEvent arg0) -> {
-            try {
-                String query = "INSERT INTO appointment (patientID, employeeID, appointmentDate) VALUES (?, ?, ?)";
-
-                DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
-                LocalDateTime localDate = LocalDateTime.now();
-
-                PreparedStatement preparedStatement = connection.prepareStatement(query);
-                preparedStatement.setString(1, PatientMainScreen.PatientName);
-                preparedStatement.setString(2, );
-                preparedStatement.setString(3, type);
-                preparedStatement.setFloat(4, amount);
-                System.out.println(preparedStatement);
-                preparedStatement.execute();
-                JOptionPane.showMessageDialog(null, "Payment Processed. Please Contact to your Bank to approve the payment.");
-                preparedStatement.close();
-
-            } catch (Exception e2) {
-                JOptionPane.showMessageDialog(null, e2);
-            }
-        });
-        btnAppointment.setBounds(970, 0, 269, 103);
-        add(btnAppointment);
+//        JButton btnAppointment = new JButton("Make Payment");
+//        btnPayment.addActionListener((ActionEvent arg0) -> {
+//            try {
+//                String query = "INSERT INTO appointment (patientID, employeeID, appointmentDate) VALUES (?, ?, ?)";
+//
+//                DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+//                LocalDateTime localDate = LocalDateTime.now();
+//
+//                PreparedStatement preparedStatement = connection.prepareStatement(query);
+//                preparedStatement.setString(1, PatientMainScreen.PatientName);
+//                preparedStatement.setString(2, );
+//                preparedStatement.setString(3, type);
+//                preparedStatement.setFloat(4, amount);
+//                System.out.println(preparedStatement);
+//                preparedStatement.execute();
+//                JOptionPane.showMessageDialog(null, "Payment Processed. Please Contact to your Bank to approve the payment.");
+//                preparedStatement.close();
+//
+//            } catch (Exception e2) {
+//                JOptionPane.showMessageDialog(null, e2);
+//            }
+//        });
+//        btnAppointment.setBounds(970, 0, 269, 103);
+//        add(btnAppointment);
     }
 }
