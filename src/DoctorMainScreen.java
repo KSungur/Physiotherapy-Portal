@@ -255,7 +255,8 @@ public class DoctorMainScreen extends JPanel {
         try {
             String query = "SELECT patientID, appointmentDate " +
                     "FROM appointment " +
-                    "ORDER BY appointmentDate";
+                    "WHERE employeeID= " + DoctorMainScreen.DoctorName +
+                    " ORDER BY appointmentDate";
             PreparedStatement pst = connection.prepareStatement(query);
             ResultSet rs = pst.executeQuery();
             tableAppointment.setModel(DbUtils.resultSetToTableModel(rs));

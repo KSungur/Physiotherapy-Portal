@@ -71,16 +71,15 @@ public class PatientLoginScreen extends JPanel {
                 while (rs.next()) {
                     count++;
                 }
-                if (count == 1) {
+                if (count != 1) {
+                    JOptionPane.showMessageDialog(null, "Username or password incorrect");
+                } else {
                     PatientMainScreen.Patientinput(tvPatientID.getText());
-                    JOptionPane.showMessageDialog(null, "Username and password correct");
                     removeAll();
                     add(new PatientMainScreen());
                     repaint();
                     invalidate();
                     revalidate();
-                } else {
-                    JOptionPane.showMessageDialog(null, "Username or password incorrect");
                 }
 
                 rs.close();
