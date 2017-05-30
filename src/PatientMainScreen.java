@@ -1,22 +1,14 @@
-import javax.swing.*;
-
 import chrriis.dj.nativeswing.swtimpl.NativeInterface;
 
-import java.awt.BorderLayout;
-import java.awt.GraphicsDevice;
-import java.awt.GraphicsEnvironment;
-
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
+import javax.swing.*;
+import java.awt.*;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
 
 class PatientMainScreen extends JPanel {
 
-    private static String PatientName;
+    public static String PatientName;
     private Connection connection = null;
 
     static void Patientinput(String patientName) {

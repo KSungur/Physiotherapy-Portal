@@ -34,7 +34,7 @@ public class DoctorMessageScreen extends JFrame {
     /**
      * Create the frame.
      */
-    public  DoctorMessageScreen() {
+    DoctorMessageScreen() {
         connection = MySqlConn.dbConnector();
         setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
         setBounds(100, 100, 600, 405);
@@ -68,11 +68,11 @@ public class DoctorMessageScreen extends JFrame {
                     ResultSet rs = pst.executeQuery();
                     while (rs.next()) {
                         message_From = rs.getString("messageFrom");
-                        DoctorWriteMessageScreen.DoctorMessageInput(rs.getString("messageFrom"));
-                        DoctorReadMessageScreen.DoctorReadMessageInput(rs.getString("messageFrom"));
                         date = rs.getString("Date");
-                        DoctorReadMessageScreen.DoctorReadMessageDate(date);
-                        DoctorWriteMessageScreen.DoctorMessageDate(date);
+                        DoctorWriteMessageJFrame.DoctorWriteMessageInput(rs.getString("messageFrom"));
+                        DoctorReadMessageJFrame.DoctorReadMessageInput(rs.getString("messageFrom"), date);
+                        date = rs.getString("Date");
+                        DoctorWriteMessageJFrame.DoctorWriteMessageInput(date);
                     }
 
                     pst.close();
@@ -87,13 +87,9 @@ public class DoctorMessageScreen extends JFrame {
             if (Objects.equals(message_From, "")) {
                 JOptionPane.showMessageDialog(null, "Mesaj Secilmedi");
             } else {
-                removeAll();
-//                getContentPane().add(new DoctorReadMessageScreen());
-                DoctorReadMessageScreen doctorReadMessageScreen = new DoctorReadMessageScreen();
-                doctorReadMessageScreen.setVisible(true);
-                repaint();
-                invalidate();
-                revalidate();
+                DoctorReadMessageJFrame doctorReadMessageJFrame = new DoctorReadMessageJFrame();
+                doctorReadMessageJFrame.setVisible(true);
+                DoctorReadMessageJFrame.DoctorReadMessageInput(message_From, date);
             }
         });
         btnShow.setBounds(184, 332, 89, 23);
@@ -104,11 +100,8 @@ public class DoctorMessageScreen extends JFrame {
             if (Objects.equals(message_From, "")) {
                 JOptionPane.showMessageDialog(null, "Mesaj Secilmedi");
             } else {
-                removeAll();
-                getContentPane().add(new DoctorWriteMessageScreen());
-                repaint();
-                invalidate();
-                revalidate();
+            	DoctorWriteMessageJFrame doctorWriteMessageJFrame = new DoctorWriteMessageJFrame();
+                doctorWriteMessageJFrame.setVisible(true);
             }
         });
         btnReply.setBounds(294, 332, 89, 23);
