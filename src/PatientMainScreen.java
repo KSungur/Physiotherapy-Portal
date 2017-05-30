@@ -68,7 +68,6 @@ class PatientMainScreen extends JPanel {
         Infopanel.add(address);
 
 
-
         JLabel nameTXT = new JLabel();
         nameTXT.setBounds(110, 35, 90, 14);
         Infopanel.add(nameTXT);
@@ -162,11 +161,11 @@ class PatientMainScreen extends JPanel {
             PreparedStatement preparedStatement = connection.prepareStatement(query);
             ResultSet rs = preparedStatement.executeQuery();
             while (rs.next()) {
-                String ID =rs.getString("patientID");
+                String ID = rs.getString("patientID");
                 String Name = rs.getString("Name");
-                String Surname =rs.getString("Surname");
+                String Surname = rs.getString("Surname");
                 String Gender = rs.getString("Gender");
-                String Phone =rs.getString("Phone");
+                String Phone = rs.getString("Phone");
                 String Birth = rs.getString("Birth");
                 String Address = rs.getString("Address");
                 String Email = rs.getString("Email");

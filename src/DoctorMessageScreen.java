@@ -37,7 +37,7 @@ public class DoctorMessageScreen extends JFrame {
     DoctorMessageScreen() {
         connection = MySqlConn.dbConnector();
         setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
-        setBounds(100, 100, 600, 405);
+        setBounds(100, 100, 760, 405);
         setTitle("Messages");
         JPanel contentPane = new JPanel();
         contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -46,7 +46,7 @@ public class DoctorMessageScreen extends JFrame {
 
         JScrollPane scrollPane = new JScrollPane();
         scrollPane.setViewportBorder(new TitledBorder(null, "Messages", TitledBorder.LEADING, TitledBorder.TOP, null, null));
-        scrollPane.setBounds(10, 11, 564, 310);
+        scrollPane.setBounds(10, 11, 725, 310);
         contentPane.add(scrollPane);
 
         tableMessages = new JTable();

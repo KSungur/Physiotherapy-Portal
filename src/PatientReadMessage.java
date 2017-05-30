@@ -14,7 +14,7 @@ import java.util.Objects;
 public class PatientReadMessage extends JFrame {
     private Connection connection = null;
     private JTable tableMessages;
-    private String message_From = "";
+    public String message_From = "";
     private String date = "";
 
     /**
@@ -34,7 +34,7 @@ public class PatientReadMessage extends JFrame {
     PatientReadMessage() {
         connection = MySqlConn.dbConnector();
         setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
-        setBounds(100, 100, 600, 405);
+        setBounds(100, 100, 740, 405);
         setTitle("Messages");
         JPanel contentPane = new JPanel();
         contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -43,7 +43,7 @@ public class PatientReadMessage extends JFrame {
 
         JScrollPane scrollPane = new JScrollPane();
         scrollPane.setViewportBorder(new TitledBorder(null, "Messages", TitledBorder.LEADING, TitledBorder.TOP, null, null));
-        scrollPane.setBounds(10, 11, 564, 310);
+        scrollPane.setBounds(10, 11, 725, 310);
         contentPane.add(scrollPane);
 
         tableMessages = new JTable();
@@ -66,7 +66,7 @@ public class PatientReadMessage extends JFrame {
                     while (rs.next()) {
                         message_From = rs.getString("messageFrom");
                         date = rs.getString("Date");
-                        DoctorWriteMessageJFrame.DoctorWriteMessageInput(rs.getString("messageFrom"));
+                        PatientWriteMessage.PatientWriteMessageInput(rs.getString("messageFrom"));
                         DoctorReadMessageJFrame.DoctorReadMessageInput(rs.getString("messageFrom"), date);
                         date = rs.getString("Date");
                         DoctorWriteMessageJFrame.DoctorWriteMessageInput(date);
@@ -97,8 +97,8 @@ public class PatientReadMessage extends JFrame {
             if (Objects.equals(message_From, "")) {
                 JOptionPane.showMessageDialog(null, "Mesaj Secilmedi");
             } else {
-                DoctorWriteMessageJFrame doctorWriteMessageJFrame = new DoctorWriteMessageJFrame();
-                doctorWriteMessageJFrame.setVisible(true);
+                PatientWriteMessage patientWriteMessage = new PatientWriteMessage();
+                patientWriteMessage.setVisible(true);
             }
         });
         btnReply.setBounds(294, 332, 89, 23);

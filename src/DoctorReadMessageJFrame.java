@@ -63,14 +63,14 @@ public class DoctorReadMessageJFrame extends JFrame {
 		tvMessage = new JTextArea();
 		scrollPane.setViewportView(tvMessage);
 		
-		JButton btnReply = new JButton("Reply");
-		btnReply.addActionListener(arg0 -> {
-            DoctorWriteMessageJFrame doctorWriteMessageJFrame = new DoctorWriteMessageJFrame();
-            doctorWriteMessageJFrame.setVisible(true);
-            DoctorWriteMessageJFrame.DoctorWriteMessageInput(message_From);
-        });
-		btnReply.setBounds(169, 265, 89, 23);
-		contentPane.add(btnReply);
+//		JButton btnReply = new JButton("Reply");
+//		btnReply.addActionListener(arg0 -> {
+//            DoctorWriteMessageJFrame doctorWriteMessageJFrame = new DoctorWriteMessageJFrame();
+//            doctorWriteMessageJFrame.setVisible(true);
+//            DoctorWriteMessageJFrame.DoctorWriteMessageInput(message_From);
+//        });
+//		btnReply.setBounds(169, 265, 89, 23);
+//		contentPane.add(btnReply);
 		fillMessageText();
 	}
 	

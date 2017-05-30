@@ -127,9 +127,7 @@ public class PatientSignupScreen extends JFrame {
                             }
                             //Get complete hashed password in hex format
                             generatedPassword = sb.toString();
-                        }
-                        catch (NoSuchAlgorithmException e3)
-                        {
+                        } catch (NoSuchAlgorithmException e3) {
                             e3.printStackTrace();
                         }
 

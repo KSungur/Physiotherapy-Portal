@@ -30,15 +30,11 @@ public class DoctorLoginScreen extends JPanel {
         add(tvDoctorID);
         tvDoctorID.setColumns(10);
 
-        JCheckBox checkDoctor = new JCheckBox("Remember Me");
-        checkDoctor.setBounds(359, 492, 150, 25);
-        add(checkDoctor);
-
         JButton btnDoctorLogin = new JButton("Login");
         btnDoctorLogin.addActionListener(e -> {
             try {
 
-                String query = "select * from therapist where employeeID=? and password=?";
+                String query = "SELECT * FROM therapist WHERE employeeID=? and password=?";
                 PreparedStatement pst = connection.prepareStatement(query);
                 pst.setString(1, tvDoctorID.getText());
 
@@ -70,16 +66,15 @@ public class DoctorLoginScreen extends JPanel {
                 while (rs.next()) {
                     count++;
                 }
-                if (count == 1) {
+                if (count != 1) {
+                    JOptionPane.showMessageDialog(null, "Username or password incorrect");
+                } else {
                     DoctorMainScreen.Doctorinput(tvDoctorID.getText());
-                    JOptionPane.showMessageDialog(null, "Username and password correct");
                     removeAll();
                     add(new DoctorMainScreen());
                     repaint();
                     invalidate();
                     revalidate();
-                } else {
-                    JOptionPane.showMessageDialog(null, "Username or password incorrect");
                 }
                 rs.close();
                 pst.close();

@@ -7,66 +7,65 @@ import java.sql.PreparedStatement;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
-public class PatientMessageScreen extends JFrame {
 
-    private Connection connection = null;
-    private JTextField tvDoctorID;
+public class PatientWriteMessage extends JFrame {
+    private Connection connection;
     private JTextField tvSubject;
+    private JTextArea tvMessage;
+    public static String messageTo;
+    private String message;
+    private String subject;
+    static void PatientWriteMessageInput(String msgTo) {
+        messageTo = msgTo;
+    }
 
-    /**
-     * Launch the application.
-     */
+
     public static void main(String[] args) {
         EventQueue.invokeLater(() -> {
             try {
-                PatientMessageScreen frame = new PatientMessageScreen();
+                PatientWriteMessage frame = new PatientWriteMessage();
                 frame.setVisible(true);
             } catch (Exception e) {
                 e.printStackTrace();
             }
         });
     }
-
-    /**
-     * Create the frame.
-     */
-    public PatientMessageScreen() {
+    PatientWriteMessage() {
         connection = MySqlConn.dbConnector();
         setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
-        setBounds(100, 100, 600, 405);
+        setBounds(100, 100, 450, 341);
         JPanel contentPane = new JPanel();
         contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
         setContentPane(contentPane);
         contentPane.setLayout(null);
 
-        JLabel lblDoctorID = new JLabel("Doctor ID :");
-        lblDoctorID.setBounds(12, 13, 100, 16);
-        contentPane.add(lblDoctorID);
+        JLabel lblMessageFrom = new JLabel("Message From");
+        lblMessageFrom.setBounds(10, 11, 107, 14);
+        contentPane.add(lblMessageFrom);
+        lblMessageFrom.setText(messageTo);
 
-        tvDoctorID = new JTextField();
-        tvDoctorID.setBounds(96, 10, 116, 22);
-        contentPane.add(tvDoctorID);
-        tvDoctorID.setColumns(10);
-
-        JLabel lblNewLabel = new JLabel("Subject");
-        lblNewLabel.setBounds(12, 60, 56, 16);
-        contentPane.add(lblNewLabel);
+        JLabel lblNewLabel_1 = new JLabel("Subject");
+        lblNewLabel_1.setBounds(10, 36, 46, 14);
+        contentPane.add(lblNewLabel_1);
 
         tvSubject = new JTextField();
-        tvSubject.setBounds(96, 57, 474, 22);
+        tvSubject.setBounds(66, 33, 358, 20);
         contentPane.add(tvSubject);
         tvSubject.setColumns(10);
 
         JScrollPane scrollPane = new JScrollPane();
         scrollPane.setViewportBorder(new TitledBorder(null, "Message", TitledBorder.LEADING, TitledBorder.TOP, null, null));
-        scrollPane.setBounds(12, 94, 558, 221);
+        scrollPane.setBounds(10, 69, 414, 181);
         contentPane.add(scrollPane);
 
-        JTextArea tvMessage = new JTextArea();
+        tvMessage = new JTextArea();
         scrollPane.setViewportView(tvMessage);
 
         JButton btnSend = new JButton("Send");
         btnSend.addActionListener(e -> {
+            message = tvMessage.getText();
+            subject = tvSubject.getText();
+
             int reply = JOptionPane.showConfirmDialog(null, "Sending message?", "Confirm", JOptionPane.YES_NO_OPTION);
             if (reply == JOptionPane.YES_OPTION) {
                 try {
@@ -76,7 +75,7 @@ public class PatientMessageScreen extends JFrame {
                     LocalDateTime localDate = LocalDateTime.now();
 
                     PreparedStatement preparedStatement = connection.prepareStatement(query);
-                    preparedStatement.setString(1, tvDoctorID.getText());
+                    preparedStatement.setString(1, messageTo);
                     preparedStatement.setString(2, PatientMainScreen.PatientName);
                     preparedStatement.setString(3, tvSubject.getText());
                     preparedStatement.setString(4, tvMessage.getText());
@@ -94,7 +93,7 @@ public class PatientMessageScreen extends JFrame {
                 JOptionPane.showMessageDialog(null, "GOODBYE");
             }
         });
-        btnSend.setBounds(250, 320, 97, 25);
+        btnSend.setBounds(166, 268, 89, 23);
         contentPane.add(btnSend);
     }
 }
